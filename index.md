@@ -8,7 +8,7 @@ layout: default
 
 ***
 
-* I am currently pursuing the Ph.D. degree in Electromechanical Engineering at the University of Macau, Macao, China. His current research interests include micro/nanorobotics, biological cell microinjection, and intelligent control, etc.
+* I am currently pursuing the Ph.D. degree in Electromechanical Engineering at the University of Macau, Macao, China. My current research interests include micro/nanorobotics, biological cell microinjection, and intelligent control, etc.
 * I am passionate about Machine Learning and Robotics. I have obtained Machine Learning, Deep Learning Nanodegree from Udacity, and I am working on Robotics Nanodegree now.
 
 Picture sample
