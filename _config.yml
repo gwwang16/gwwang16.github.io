@@ -1,4 +1,5 @@
 title: Guangwei Wang
+purpose: Personal Homepage
 view_title: false
 description: Hi there, I am Guangwei Wang.
 google_analytics: 102217502
@@ -12,5 +13,5 @@ github:
   is_project_page: true
   owner_name: gwwang16
   owner_url: https://github.com/gwwang16
-  repository_name: Personal Homepage
+  repository_name: gwwang16.github.io
   repository_url: https://github.com/gwwang16
