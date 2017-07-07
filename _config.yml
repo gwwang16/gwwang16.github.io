@@ -1,7 +1,7 @@
 title: Guangwei Wang
 view_title: false
 description: Hi there, I am Guangwei Wang.
-google_analytics: UA-102217502-1
+google_analytics: 102217502
 
 theme: jekyll-theme-cayman
 gem "github-pages", group: :jekyll_plugins
