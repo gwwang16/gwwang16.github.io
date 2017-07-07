@@ -1,0 +1,6 @@
+title: Guangwei Wang
+description: Hi there, I am Guangwei Wang.
+show_downloads: true
+google_analytics: UA-102217502-1
+theme: jekyll-theme-cayman
+gem "github-pages", group: :jekyll_plugins
