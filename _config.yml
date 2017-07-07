@@ -1,6 +1,17 @@
 title: Guangwei Wang
+view_title: false
 description: Hi there, I am Guangwei Wang.
-show_downloads: true
 google_analytics: UA-102217502-1
+
 theme: jekyll-theme-cayman
 gem "github-pages", group: :jekyll_plugins
+
+email: gwwang17@gmail.com
+
+github:
+  is_project_page: true
+  owner_name: gwwang16
+  owner_url: https://github.com/gwwang16
+  repository_name: Personal Homepage
+  repository_url: https://github.com/gwwang16
+

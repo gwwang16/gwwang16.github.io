@@ -13,4 +13,3 @@ layout: default
 
 Picture sample
 ![](https://guides.github.com/activities/hello-world/branching.png)
-![](https://assets-cdn.github.com/images/icons/emoji/octocat.png)
