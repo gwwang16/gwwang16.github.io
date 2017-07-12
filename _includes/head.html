@@ -11,10 +11,14 @@
 
     <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
     <link rel="stylesheet" href="{{ "/style.css" }}">
+    <!-- For all browsers -->
+    <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css'}}">
+    <link rel="stylesheet" href="{{ '/assets/css/main.css'}}">
+
 
     <!-- Google analytics -->
     {% if jekyll.environment == 'production' and site.google_analytics %}
-    {% include google-analytics.html %}
+    {% include analytics.html %}
     {% endif %}
 
     <!-- Google verification -->
@@ -35,4 +39,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <meta http-equiv="cleartype" content="on">
 </head>
