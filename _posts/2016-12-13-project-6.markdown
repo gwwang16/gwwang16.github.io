@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 6
+date: 2016-12-13
+img: submarine.png
+alt: image-alt
+project-date: December 2016
+client: Personal Interests
+category: WMachine Learning
+description: Hmm....!
+
+---

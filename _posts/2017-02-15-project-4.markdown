@@ -1,0 +1,12 @@
+---
+layout: default
+modal-id: 4
+date: 2017-02-15
+img: game.png
+alt: image-alt
+project-date: February 2017
+client: Personal Interests
+category: Machine Learning
+description: No description yet!
+
+---

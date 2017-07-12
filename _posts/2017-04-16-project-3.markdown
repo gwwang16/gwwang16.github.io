@@ -1,0 +1,11 @@
+---
+layout: default
+modal-id: 3
+date: 2017-04-16
+img: circus.png
+alt: image-alt
+project-date: April 2017
+client: Personal Interests
+category: Machine Learning
+description: No description!
+---
