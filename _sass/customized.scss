@@ -33,6 +33,13 @@
 // @import "minimal-mistakes/sidebar";
 // @import "minimal-mistakes/print";
 
+
+/* Variables */
 @import "customized/variables";
+
+/* Global functions */
 @import "customized/global";
+
+// /* Core CSS */
+@import "customized/animations";
 @import "customized/extraboostrap";

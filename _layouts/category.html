@@ -21,22 +21,45 @@ layout: default
   {% endif %}
 {% endfor %}
 
-<div class="row">
-  <div class="col-md-9">
+<div class="row wrapper wrapper-content blog">
+  <div class="col-md-offset-2 col-md-8">
     <div class="list-group">
-        {% assign date_format = site.minima.date_format | default: "%Y-%m-%d %H:%M:%S" %}
+        {% assign date_format = "%Y-%m-%d %H:%M:%S" %}
         {% for ct in cats %}
-            <li class="navbar" id="{{ ct | slugify }}"><strong>{{ ct }}</strong></li>
+            <li class="list-group-item-info" id="{{ ct | slugify }}" ><h4><i class="fa fa-bars"></i> {{ ct }}</h4></li>
             {% for post in site.posts %}
               {% if post.client == None %}
-                  {% if post.category contains ct %}
-                    <a href="{{ post.url | relative_url }}" class="list-group-item list-group-item-action flex-column align-items-start">
-                      <div class="d-flex w-100 justify-content-between">
-                        <h5 class="mb-1">{{ post.title | escape }}</h5>
-                        <small>{{ post.date | date: date_format }}</small>
-                      </div>
-                    </a>
-                  {% endif %}
+                {% if post.category contains ct %}
+                <div class="small ibox-content">
+                  <a href="{{ post.url | relative_url }}" class="list-group-item align-items-start">
+                  <h4>{{ post.title | escape }}</h4>
+                  <p>
+                    <h5 class="text-muted">{{ post.content | strip_html | truncate:100 }}</h5>
+                  </p>
+                  </a>
+                  <div class="text-muted ">
+                    {% if site.disqus %}
+                      <i class="fa fa-comments-o"> </i> <span data-disqus-url="{{ site.url }}{{ post.url }}">0</span>
+                      <span style="white-space:pre" >comments   </span>
+                    {% endif %}
+                    <span style="white-space:pre"><i class="fa fa-user"></i> <strong>{{ site.author.name }}   </strong></span>
+                    <span style="white-space:pre"><i class="fa fa-clock-o"></i> {{ post.date | date: "%-d %b %Y" }}</span>
+                  </div>
+
+                  <!-- <p>
+                    {{ post.content | strip_html | truncate:100 }}
+                  </p> -->
+
+                  <!-- <div class="row">
+                    <div class="col-md-6">
+                        <h5 style="display: inline;">Tags:</h5>
+                        {% for tag in post.tags %}
+                            <button class="btn btn-xs">{{ tag }}</button>
+                        {% endfor %}
+                    </div>
+                  </div> -->
+                </div>
+                {% endif %}
               {% endif %}
             {% endfor %}
         {% endfor %}

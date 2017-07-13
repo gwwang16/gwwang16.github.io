@@ -2,3 +2,29 @@
    Etra code to overide default boostrap in this theme
    ========================================================================== */
 
+
+.list-group-item {
+    position: relative;
+    display: block;
+    max-width: 800px;
+    padding: 10px 0px;
+    // Place the border on the list items and negative margin up for better styling
+    margin-bottom: -3px;
+    background-color: $background-color;
+    // border-color: $light-gray;
+    border: none;
+    // border-right: none;
+    // border-bottom: none;
+}
+
+.list-group-item-info {
+    position: relative;
+    display: block;
+    padding: 2px 30px;
+    // Place the border on the list items and negative margin up for better styling
+    background-color: $lighter-gray;
+    color: $dark-gray;
+    // border-color: $primary-dark;
+    border-left: none;
+    border-right: none;
+}

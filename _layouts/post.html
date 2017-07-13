@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="wrapper wrapper-content  animated fadeInRight article">
+<div class="wrapper wrapper-content article">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
             <div class="ibox">
@@ -10,7 +10,7 @@ layout: default
                     <div class="pull-right">
                     	{% for category in page.categories %}
                         	<button class="btn btn-white btn-xs" type="button">{{ category }}</button>
-                        {% endfor %}
+                      {% endfor %}
                     </div>
                     <div class="text-center article-title">
                     <span class="text-muted"><i class="fa fa-clock-o"></i> {{ page.date | date: "%-d %b %Y" }}</span>
