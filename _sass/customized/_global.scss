@@ -102,6 +102,15 @@ hr.star-primary:after {
 }
 
 
+// .index-font index-h1, index-h2, index-h3, index-h4, index-h5 {
+//     text-transform: uppercase;
+//     font-family: $index-font-family;
+//     margin-bottom: 10px;
+//     color: $body-color;
+// }
+
+
+
 /**
  * blog and article font
  */
@@ -121,7 +130,7 @@ hr.star-primary:after {
     text-transform: capitalize;
     font-family: $header-font-family;
     margin-bottom: 10px;
-    color: $primary-dark;
+    // color: $primary-dark;
 }
 
 .article h4, h5, h6 {
