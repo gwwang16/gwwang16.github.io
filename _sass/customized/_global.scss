@@ -46,6 +46,11 @@ hr.blank {
     border-top: solid 3px;
 }
 
+hr.navmargin {
+    margin: 50px auto 50px;
+    padding: 0;
+}
+
 hr.line {
     margin: 10px auto 20px;
     padding: 0;
@@ -360,17 +365,31 @@ footer h3 {
     margin-bottom: 30px;
 }
 
-footer .footer-above {
+footer .footer-above-index {
     padding-top: 50px;
     background-color: $secondary;
 }
 
-footer .footer-col {
+footer .footer-col-index {
     margin-bottom: 50px;
 }
 
-footer .footer-below {
+footer .footer-below-index {
     padding: 25px 0;
+    background-color: $secondary-dark;
+}
+
+footer .footer-above {
+    padding-top: 5px;
+    background-color: $secondary;
+}
+
+footer .footer-col {
+    margin-bottom: 5px;
+}
+
+footer .footer-below {
+    padding: 5px 0;
     background-color: $secondary-dark;
 }
 
