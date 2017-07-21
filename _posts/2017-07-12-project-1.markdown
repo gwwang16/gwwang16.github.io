@@ -8,6 +8,9 @@ alt: image-alt
 project-date: June 2017
 client: Personal Interests
 category: Robotics
-description: Pick and Place project for RoboND Term 1. Given a list of end-effector poses, calculate joint angles using Inverse Kinematics for the Kuka KR210. <br> Video:<a href="https://youtu.be/KdBoLlqrd5A">https://youtu.be/KdBoLlqrd5A</a>
+description:
+    Pick and Place project for RoboND Term 1. <br>
+    Given a list of end-effector poses, calculate joint angles using Inverse Kinematics for the Kuka KR210.<br>
+    Video:<a href="https://youtu.be/KdBoLlqrd5A">https://youtu.be/KdBoLlqrd5A</a>
 
 ---

@@ -2,7 +2,7 @@
 layout: home
 modal-id: 5
 date: 2017-01-14
-img: safe.png
+img: cake.png
 alt: image-alt
 project-date: January 2017
 client: Personal Interests

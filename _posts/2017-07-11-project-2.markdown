@@ -1,12 +1,18 @@
 ---
 layout: home
 modal-id: 2
+title: "Search and Sample Return Project"
 date: 2017-07-11
-img: cake.png
+img: rover.png
 alt: image-alt
 project-date: July 2017
 client: Personal Interests
 category: Robotics
-description: No description yet...
+description:
+    This project is modeled after the NASA sample return challenge. <br>
+    The rover can autonomously map a simulated environment and search for samples of interest. <br>
+    The simulator environment is built with the Unity game engine. <br>
+    Video:<a href="https://youtu.be/SUSzm_10sPE">https://youtu.be/SUSzm_10sPE</a>
+
 
 ---
