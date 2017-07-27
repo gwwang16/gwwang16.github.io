@@ -14,7 +14,7 @@ about:
   description1: "I am currently pursuing the Ph.D. degree in Electromechanical Engineering at the University of Macau, Macao, China. My current research interests include micro/nanorobotics, biological cell microinjection, and intelligent control, etc."
   description2: "I am passionate about Machine Learning and Robotics. I have obtained Machine Learning, Deep Learning Nanodegree from Udacity, and I am working on Robotics Nanodegree now."
 
-# Google analytics num
+# Google analytics code
 google_analytics: UA-102217502-1
 
 # Google webmaster tools
@@ -29,8 +29,7 @@ bing_verify:
 # - comment the line below if you want to stick with the default PHP contact form
 contact: static
 
-# If you use disqus you need disqus shortname
-# https://help.disqus.com/customer/portal/articles/466208
+# disqus shortname
 disqus:
   shortname: gwwang
 
@@ -51,7 +50,7 @@ footer:
   credits: Credits
   links: Links
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social networks usernames (google-plus, flickr, instagram, linkedin, etc.)
 social:
   - title: linkedin
     url: https://www.linkedin.com/in/wangguangwei/
