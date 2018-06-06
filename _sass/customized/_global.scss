@@ -46,6 +46,24 @@ hr.blank {
     border-top: solid 3px;
 }
 
+hr.interval {
+    margin: 90px auto 90px;
+    padding: 0;
+    max-width: 500px;
+    border: 0;
+    text-align: center;
+    border-top: solid 0px;    
+}
+
+hr.interval40 {
+    margin: 40px auto 40px;
+    padding: 0;
+    max-width: 500px;
+    border: 0;
+    text-align: center;
+    border-top: solid 0px;    
+}
+
 hr.navmargin {
     margin: 55px auto 55px;
     padding: 0;
@@ -275,10 +293,10 @@ header img {
 
 header .intro-text .name {
     display: block;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-family: Open Sans,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
-    font-weight: 700;
+    font-weight: 400;
     margin-bottom: 20px;
 
 }
@@ -297,7 +315,7 @@ header .intro-text .skills {
     }
 
     header .intro-text .name {
-        font-size: 4.75em;
+        font-size: 2.75em;
     }
 
     header .intro-text .skills {

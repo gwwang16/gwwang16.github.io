@@ -2,8 +2,11 @@
 title: Guangwei Wang
 email: gwwang17@gmail.com
 url: http://guangwei.wang
-description: "Hi there."
-keywords: "Guangwei Wang, homepage, github pages"
+description: "Hi, I'm Guangwei Wang."
+description1: "Ph.D. student, University of Macau"
+description2: "Automatic Control, Robotics, Machine Learning, Autonoumous Driving"
+
+keywords: "Guangwei Wang, homepage, github pages, Wang Guangwei, gwwang"
 skills: "PhD Student"
 meta_author: Guangwei Wang
 author:
@@ -12,8 +15,8 @@ author:
 # descrition in about me
 about:
   description1: "I am currently pursuing the Ph.D. degree in Electromechanical Engineering at the University of Macau, Macao, China. My current research interests include micro/nanorobotics, biological cell microinjection, and intelligent control, etc."
-  description2: "I am passionate about Machine Learning and Robotics. I have obtained Machine Learning, Deep Learning Nanodegree from Udacity, and I am working on Robotics Nanodegree now."
-
+  description2: "I am passionately curious about Machine Learning and Robotics. I have obtained Machine Learning, Deep Learning Nanodegree from Udacity, and I am working on Robotics Nanodegree now."
+  description3: "I have passion for Automatic Control, Robotics, Machine Learning, Autonoumous Driving. I have no special talents. I am only passionately curious."
 # Google analytics code
 google_analytics: UA-102217502-1
 

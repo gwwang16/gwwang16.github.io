@@ -46,6 +46,15 @@ hr.blank {
     border-top: solid 3px;
 }
 
+hr.interval {
+    margin: 90px auto 90px;
+    padding: 0;
+    max-width: 500px;
+    border: 0;
+    text-align: center;
+    border-top: solid 0px;    
+}
+
 hr.line {
     margin: 10px auto 20px;
     padding: 0;

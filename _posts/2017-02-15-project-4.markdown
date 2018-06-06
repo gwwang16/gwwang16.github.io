@@ -2,7 +2,7 @@
 layout: home
 modal-id: 4
 date: 2017-02-15
-img: game.png
+img: clone.png
 alt: image-alt
 project-date: February 2017
 client: Personal Interests

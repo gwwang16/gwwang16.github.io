@@ -3,7 +3,7 @@ layout: home
 modal-id: 2
 title: "Search and Sample Return Project"
 date: 2017-07-11
-img: rover.png
+img: search-return.png
 alt: image-alt
 project-date: July 2017
 client: Personal Interests

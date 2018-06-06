@@ -2,10 +2,11 @@
 layout: home
 modal-id: 3
 date: 2017-04-16
-img: circus.png
+img: home-service-robot.png
 alt: image-alt
 project-date: April 2017
 client: Personal Interests
 category: Machine Learning
-description: No description!
+description: No description! ![](../_site/img/profile.png) ![](../img/profile.png)
+
 ---

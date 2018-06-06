@@ -2,7 +2,7 @@
 layout: home
 modal-id: 6
 date: 2016-12-13
-img: submarine.png
+img: detect.png
 alt: image-alt
 project-date: December 2016
 client: Personal Interests

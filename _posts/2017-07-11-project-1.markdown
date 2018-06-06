@@ -2,8 +2,8 @@
 layout: home
 title: "Robotic arm - Pick & Place"
 modal-id: 1
-date: 2017-07-12
-img: arm.png
+date: 2017-07-11
+img: pick-place.png
 alt: image-alt
 project-date: June 2017
 client: Personal Interests
