@@ -293,7 +293,7 @@ header img {
 
 header .intro-text .name {
     display: block;
-    // text-transform: uppercase;
+    text-transform: capitalize; //uppercase;
     font-family: Open Sans,Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-size: 2em;
     font-weight: 400;
