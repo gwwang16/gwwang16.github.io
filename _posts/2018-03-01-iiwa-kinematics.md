@@ -3,9 +3,9 @@ title: 'IIWA Kinematics'
 date: 2018-03-01
 permalink: /posts/2018/03/blog-post-1/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - robot arm
+  - kuka iiwa
+  - inverse kinematics
 ---
 
 Given a list of end-effector poses, calculate joint angles using Inverse Kinematics for the KUKA LBR IIWA R820

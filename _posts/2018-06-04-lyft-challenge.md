@@ -3,9 +3,9 @@ title: 'Lyft Perception Challenge'
 date: 2018-06-04
 permalink: /posts/2018/06/blog-post-1/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - semantic segmentation
+  - autonomous driving
+  - deep learning
 ---
 
 Achieve pixel-wise identification of objects in camera images.
@@ -22,23 +22,23 @@ https://www.udacity.com/lyft-challenge
 
 ![alt text][gif]
 
-### Overview
+## Overview
 
 The goal in this challenge is pixel-wise identification of objects in camera images. In other words, the task is to identify exactly what is in each pixel of an image! More specifically, you'll be identifying cars and the drivable area of the road. The images below are a simulated camera image on the left and a label image on the right, where each different type of object in the image corresponds to a different color.
 
-The challenge time is from **May 1st 10:00 am PST to June 3rd at 6:00 pm PST**. 
+The challenge time is from *May 1st 10:00 am PST to June 3rd at 6:00 pm PST*. 
 
-#### Result
+### Result
 
-I got the rank 19th finally. 
+I got the **rank 19th** finally. 
 
-The top 25 (with U.S. work authorization) will be eligible for an interview with Lyft. So, I participated this challenge just for the fun of it.
+The top 25 (only with U.S. work authorization) will be eligible for an interview with Lyft. So, I participated this challenge just for the fun of it.
 
 ![alt text][score]
 
-#### The Data
+### The Data
 
-The challenge data is being produced by the [CARLA Simulator](http://carla.org/) an open source autonomous vehicle platform for the testing and derivative of autonomous algorithms.  You can download the data [here](https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/Lyft_Challenge/Training+Data/lyft_training_data.tar.gz). 
+The challenge data is being produced by the [CARLA Simulator](http://carla.org/), an open source autonomous vehicle platform for the testing and derivative of autonomous algorithms.  You can download the data [here](https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/Lyft_Challenge/Training+Data/lyft_training_data.tar.gz). 
 
 The dataset consists of images and the corresponding ground truth pixel-wise labels for each image.
 
@@ -104,13 +104,13 @@ $$\rm{Final~Score} = \rm{F_{avg}}*100 - \rm{Penalty_{\tiny{FPS}}}$$
 
 
 
-#### Model
+### Model
 
 ...
 
 
 
-#### Optimizer
+### Optimizer
 
 ...
 
