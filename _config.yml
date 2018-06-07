@@ -76,6 +76,11 @@ analytics:
     tracking_id          : UA-102217502-1
 
 
+# website favico
+favico:
+  path: /images/favico.ico
+
+
 # Site Author
 author:
   name             : "Guangwei Wang"

@@ -18,4 +18,8 @@
 <!-- For all browsers -->
 <link rel="stylesheet" href="{{ base_path }}/assets/css/main.css">
 
+{% if site.favico.path %}
+  <link rel="shortcut icon" href="{{ site.favico.path }}" />
+{% endif %}
+
 <meta http-equiv="cleartype" content="on">
