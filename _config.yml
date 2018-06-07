@@ -111,6 +111,16 @@ author:
   youtube          : 
   wikipedia        :
 
+# Social networks usernames (google-plus, flickr, instagram, linkedin, etc.)
+networks:
+  - title: linkedin
+    url: https://www.linkedin.com/in/wangguangwei/
+  - title: github
+    url: http://github.com/gwwang16
+  - title: weibo
+    url:
+  - title: facebook
+    url:
 
 # Reading Files
 include:
