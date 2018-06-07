@@ -1,10 +1,7 @@
-# Personal page
 
-## Introduction
-This repository is my personal website [Guangwei.wang](http://guangwei.wang), hosted on Github Pages at [gwwang16.github.io](https://gwwang16.github.io). It based on [Freelancer bootstrap theme ](http://startbootstrap.com/template-overviews/freelancer/).
+## Personal page
 
-## Demo
-View this jekyll theme in action [here](https://jeromelachaud.github.io/freelancer-theme)
+#### Introduction
+This repository is my personal website Guangwei.wang, hosted on Github Pages at gwwang16.github.io.
 
----------
-For more details, read the [documentation](http://jekyllrb.com/)
+This website is based on [academicpages](https://academicpages.github.io) forked from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License. See LICENSE.md.

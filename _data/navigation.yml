@@ -1,0 +1,24 @@
+# main links links
+main:
+  - title: "Home"
+    url: /
+  - title: "Publications"
+    url: /publications/
+
+  # - title: "Talks"
+  #   url: /talks/    
+
+  # - title: "Teaching"
+  #   url: /teaching/    
+    
+  - title: "Portfolio"
+    url: /portfolio/
+        
+  - title: "Blog"
+    url: /blog/
+    
+  - title: "CV"
+    url: /cv/
+    
+  # - title: "About me"
+  #   url: /about/
