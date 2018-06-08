@@ -22,7 +22,7 @@ Check my research at [Publications](/publications/) and [CV](/cv/) sections.
 ## Interests
 
 I have passion for Automatic Control, Robotics, Machine Learning and Autonoumous Driving.
-Besides my research works, I also complete several online degrees from Udacity. I did some interesting projects during learning them, take a look at [Portfolio](/portfolio) and my GitHub.
+Besides my research works, I have completed several online degrees from Udacity. I did some interesting projects during learning them, take a look at [Portfolio](/portfolio) section and my GitHub.
 
 - [x] <a href="https://www.udacity.com/course/machine-learning-engineer-nanodegree--nd009t" target="_blank">Machin Learning Nanodegree</a>, Udacity
 - [x] <a href="https://www.udacity.com/course/deep-learning-nanodegree--nd101" target="_blank">Deep Learning Nanodegree</a>, Udacity
