@@ -11,7 +11,7 @@ title                    : "Guangwei WANG "
 title_separator          : "-"
 name                     : &name "Guangwei WANG"
 description              : &description "Hi, I'm Guangwei Wang."
-url                      : http://guangwei.wang # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+url                      : https://guangwei.wang # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "gwwang16/gwwang16.github.io"
 teaser                   :  # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
@@ -121,7 +121,7 @@ networks:
   - title: linkedin
     url: https://www.linkedin.com/in/wangguangwei/
   - title: github
-    url: http://github.com/gwwang16
+    url: https://github.com/gwwang16
   - title: weibo
     url:
   - title: facebook
