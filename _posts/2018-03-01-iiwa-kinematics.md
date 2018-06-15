@@ -5,7 +5,7 @@ permalink: /posts/2018/iiwa-kinematics
 tags:
   - ROS
   - kuka iiwa
-  - inverse kinematics
+  - Robotics
 ---
 
 Given a list of end-effector poses, calculate joint angles using Inverse Kinematics for the KUKA LBR IIWA R820

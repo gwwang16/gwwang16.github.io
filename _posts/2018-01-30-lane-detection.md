@@ -15,6 +15,8 @@ Build a pipeline using distortion correction, image rectification, color transfo
 Github repo https://github.com/gwwang16/CarND-Advanced-Lane-Lines
 
 
+
+
 ### Features:
 
 * Apply a distortion correction to raw images.
@@ -135,7 +137,7 @@ The curvature is calculated by `curvature()` and the lane offset is calculated b
 
 We have obtained the fitting polynomial 
 
-f(y) = Ay^2 + By + C
+$$f(y) = Ay^2 + By + C$$
 
 >
 > fitting for f(y), rather than f(x), because the lane lines in the warped image are near vertical and may have the same x value for more than one y value.
@@ -143,7 +145,7 @@ f(y) = Ay^2 + By + C
 
 The radius of curvature at any point x of the function x=f(y) is given as follows:
 
-R_{curve} = (1+(2Ay+B)^2)^(3/2) / |2A|
+$$R_{curve} = (1+(2Ay+B)^2)^{(3/2)} / |2A|$$
 
 The y values of image increase from top to bottom, so if we wanted to measure the radius of curvature closest to vehicle, we should evaluate the formula above at the y value corresponding to the bottom of  image.
 
@@ -180,6 +182,7 @@ Here is an example on a test image:
 
 ## Result
 
+Apply the proposed pipeline to video, the following result can be obtained.
 
 ![alt text][gif]
 

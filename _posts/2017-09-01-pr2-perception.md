@@ -3,9 +3,8 @@ title: 'Perception Pick & Place'
 date: 2017-09-01
 permalink: /posts/pr2-3d-perception
 tags:
-  - pr2
   - ROS
-  - svm
+  - Robotics
 ---
 
 Given a cluttered tabletop scenario, perform object segmentation on 3D point cloud data using python-pcl to leverage the power of the Point Cloud Library, then identify target objects from a “Pick-List” in a particular order, pick up those objects and place them in corresponding drop boxes.

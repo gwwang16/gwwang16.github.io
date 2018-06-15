@@ -16,6 +16,10 @@ Train a deep neural network to drive a car on  winding road autonoumosly.
 
 github repo https://github.com/gwwang16/CarND-Behavioral-Cloning-P3
 
+Video: https://youtu.be/JaKkGIGe4zo
+
+
+
 ![alt text][gif]
 
 ### Features:
