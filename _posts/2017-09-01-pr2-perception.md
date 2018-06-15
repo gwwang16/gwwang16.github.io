@@ -15,6 +15,7 @@ github repo https://github.com/gwwang16/RoboND-Perception-Project
 
 ## Project: Perception Pick & Place
 ---
+![alt text][pick_list_3_result]
 
 ### Features:
 1. Extract features and train an SVM model on required objects.
