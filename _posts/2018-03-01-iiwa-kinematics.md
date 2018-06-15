@@ -1,9 +1,9 @@
 ---
 title: 'IIWA Kinematics'
 date: 2018-03-01
-permalink: /posts/2018/03/blog-post-1/
+permalink: /posts/2018/iiwa-kinematics
 tags:
-  - robot arm
+  - ROS
   - kuka iiwa
   - inverse kinematics
 ---

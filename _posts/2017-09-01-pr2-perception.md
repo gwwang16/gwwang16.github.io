@@ -8,7 +8,7 @@ tags:
   - svm
 ---
 
-Given a cluttered tabletop scenario, perform object segmentation on 3D point cloud data using python-pcl to leverage the power of the Point Cloud Library, then identify target objects from a so-called “Pick-List” in a particular order, pick up those objects and place them in corresponding dropboxes.
+Given a cluttered tabletop scenario, perform object segmentation on 3D point cloud data using python-pcl to leverage the power of the Point Cloud Library, then identify target objects from a “Pick-List” in a particular order, pick up those objects and place them in corresponding dropboxes.
 
 
 ## Project: Perception Pick & Place
@@ -310,10 +310,8 @@ Given a cluttered tabletop scenario, perform object segmentation on 3D point clo
 
 - Object recognition results
 
-  all objects in `pick_list_*.yaml` are correctly recognized, as shown in following. The `yaml` file can be found in (/output) folder.
-
-![alt text][pick_list_1]
-![alt text][pick_list_2]
+  all objects in `pick_list_*.yaml` are correctly recognized, as shown in following. 
+  
 ![alt text][pick_list_3]
 
 ### Pick & place: 
@@ -396,9 +394,10 @@ def pr2_rot():
                 print("Get center, exist rotation.")
 ```
 
-#### 3. There are some problems about objects grasping. To solve this problem, I added fraction coefficients for each item in`test1-3.world` (/pr2_robot/worlds), advised by douglasteeple in slack, a piece of code for example,
+#### 3. There are some problems during objects grasping. To solve this problem, I added fraction coefficients for each item in`test1-3.world` (/pr2_robot/worlds)
 
-   ```<model name='snacks'>
+   ```
+       <model name='snacks'>
            <collision name='snacks_collision'>
              <pose frame=''>0.04 0.02 0.117 0 -0 2.1</pose>
              <geometry>
@@ -421,6 +420,7 @@ def pr2_rot():
            ...
        </model>
    ```
+
    where, `mu` and `mu2` are friction coefficients, `fdir1` is friction direction vector (so I set [0 0 1] here), but it is useful only if `dContactFDir1` flag is set in `surface.mode`. I know nothing about c/c++, so I don't know whether it is effective here. `soap` is very slippery, I didn't find the reason, so used a quite large `mu` 500 for it, but it still cannot be grasped sometime.
    Moreover, I increased `kp` of pid controller params for gripper from 100 to 200-500 (/pr2\_robot/config/controllers.yaml), and increased gripper velocity a little bit from 0.05 to 0.1 (/pr2\_moveit/config/joint_limits.yaml).
    Reference:
@@ -462,11 +462,7 @@ def pr2_rot():
 
 
 
-#### 4. All three pick lists are tested with my code shown above, and all objects are placed into their respective drop box. Results are the following.
-
-![alt text][pick_list_1_result]
-
-![alt text][pick_list_2_result]
+#### 4. all objects are placed into their respective drop box. Results are the following.
 
 ![alt text][pick_list_3_result]
 
