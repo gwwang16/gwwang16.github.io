@@ -1,7 +1,7 @@
 ---
 title: 'Lyft Perception Challenge'
 date: 2018-06-04
-permalink: /posts/2018/06/blog-post-1/
+permalink: /posts/2018/lyft-challenge
 tags:
   - semantic segmentation
   - autonomous driving
