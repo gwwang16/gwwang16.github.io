@@ -10,6 +10,8 @@ tags:
 
 Given a list of end-effector poses, calculate joint angles using Inverse Kinematics for the KUKA LBR IIWA R820
 
+github repo https://github.com/gwwang16/iiwa_kinematics
+
 Kinematics implementation for the KUKA LBR IIWA R820 (14 Kg). 
 
 Ubuntu 16.04 + ROS Kinetic

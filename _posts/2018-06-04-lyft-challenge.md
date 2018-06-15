@@ -8,9 +8,11 @@ tags:
   - deep learning
 ---
 
-Achieve pixel-wise identification of objects in camera images.
+Achieve pixel-wise identification of objects in camera images. It was hosted by [Udacity](https://www.udacity.com/) and[ Lyft’s Level 5 Engineering Center](https://medium.com/@lvincent/introducing-level-5-and-our-self-driving-team-705ef8989f03). details https://www.udacity.com/lyft-challenge
 
-https://www.udacity.com/lyft-challenge
+github repo https://github.com/gwwang16/Lyft-Perception-Challenge
+
+
 
 
 [//]: # "Image References"
@@ -106,11 +108,9 @@ $$\rm{Final~Score} = \rm{F_{avg}}*100 - \rm{Penalty_{\tiny{FPS}}}$$
 
 ### Model
 
-...
+fcn-mobilenet 
 
 
-
-### Optimizer
 
 ...
 

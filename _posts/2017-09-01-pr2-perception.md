@@ -8,7 +8,9 @@ tags:
   - svm
 ---
 
-Given a cluttered tabletop scenario, perform object segmentation on 3D point cloud data using python-pcl to leverage the power of the Point Cloud Library, then identify target objects from a “Pick-List” in a particular order, pick up those objects and place them in corresponding dropboxes.
+Given a cluttered tabletop scenario, perform object segmentation on 3D point cloud data using python-pcl to leverage the power of the Point Cloud Library, then identify target objects from a “Pick-List” in a particular order, pick up those objects and place them in corresponding drop boxes.
+
+github repo https://github.com/gwwang16/RoboND-Perception-Project
 
 
 ## Project: Perception Pick & Place
@@ -216,15 +218,14 @@ Given a cluttered tabletop scenario, perform object segmentation on 3D point clo
 
 ```
 	clf = svm.LinearSVC(penalty='l2', loss='squared_hinge', dual=False, tol=1e-4)
+	scores = cross_validation.cross_val_score(cv=kf, estimator=clf,
+                                              X=X_train, y=y_train,
+                                         	  scoring='r2')
 ```
 
 ​		`r2` accuracy scoring is used in `cross_val_score()` to increase accuracy.
 
-```
-	scores = cross_validation.cross_val_score(cv=kf, estimator=clf,
-                                         	X=X_train, y=y_train,
-                                         	scoring='r2')
-```
+
 
 ​	The confusion matrix without normalization is
 
@@ -303,9 +304,9 @@ Given a cluttered tabletop scenario, perform object segmentation on 3D point clo
 #### 1. For all three tabletop setups (`test*.world`), perform object recognition, then read in respective pick list (`pick_list_*.yaml`). Next construct the messages that would comprise a valid `PickPlace` request output them to `.yaml` format.
 - Output request parameters into output yaml file  
 ```
-    yaml_filename = 'output_' + str(test_scene_num.data) + '.yaml'
-    if not os.path.exists(yaml_filename):
-        send_to_yaml(yaml_filename, dict_list)
+yaml_filename = 'output_' + str(test_scene_num.data) + '.yaml'
+if not os.path.exists(yaml_filename):
+   send_to_yaml(yaml_filename, dict_list)
 ```
 
 - Object recognition results
@@ -320,15 +321,15 @@ Given a cluttered tabletop scenario, perform object segmentation on 3D point clo
 
 - To generate collision map, I built a dictionary and stored table cloud it firstly. 
 ```
- 	# Create collision point
-    collision_point = {}
-    collision_point["table"] = cloud_table.to_array()
+# Create collision point
+collision_point = {}
+collision_point["table"] = cloud_table.to_array()
 ```
    -  Then I stored each object into the dictionary.
 
 ```
-	# Add the detected object to the collision map
-    # collision_point[label] = pcl_cluster.to_array()
+# Add the detected object to the collision map
+collision_point[label] = pcl_cluster.to_array()
 ```
 - To update the collision map, we need clear the collision map before publishing.  As advised by @chedanix in slack, first calling `rostopic info /pr2/3d_map/points` and followed by `rosnode info /move_group`, we can find `/clear_octomap` service.
 ```
@@ -341,7 +342,7 @@ except rospy.ServiceException, e:
     print "Service call failed: %s" % e
 ```
 
-   -  Delete the current object from collision map during picking them, publish the collision map again.
+-  Delete the current object from collision map during picking them, publish the collision map again.
 ```
     # Delete the target clound from collision map
     del collision_point[target.label]
@@ -421,43 +422,43 @@ def pr2_rot():
        </model>
    ```
 
-   where, `mu` and `mu2` are friction coefficients, `fdir1` is friction direction vector (so I set [0 0 1] here), but it is useful only if `dContactFDir1` flag is set in `surface.mode`. I know nothing about c/c++, so I don't know whether it is effective here. `soap` is very slippery, I didn't find the reason, so used a quite large `mu` 500 for it, but it still cannot be grasped sometime.
-   Moreover, I increased `kp` of pid controller params for gripper from 100 to 200-500 (/pr2\_robot/config/controllers.yaml), and increased gripper velocity a little bit from 0.05 to 0.1 (/pr2\_moveit/config/joint_limits.yaml).
    Reference:
+
    http://gazebosim.org/tutorials/?tut=ros_urdf
+
    http://www.ode.org/ode-latest-userguide.html#sec_7_3_7
 
    As for my collision map cannot be updated once it was published, so I used table cloud as collision map only. The consequence is the gripper would hit other objects during grasping one. So I increased a bit drop position height to avoid this problem. To arrange the picked objects, I added a bias in y axis for each drop position.
 
 ```
-		# Assign the arm and 'place_pose' to be used for pick_place
-        for index in range(0, len(object_list_param)):
-            if object_list_param[index]['name'] == target.label:
-                object_group = object_list_param[index]['group']
-        for ii in range(0, len(dropbox_param)):
-            if dropbox_param[ii]['group'] == object_group:
-                arm_name.data = dropbox_param[ii]['name']
-                dropbox_position = dropbox_param[ii]['position']
-                dropbox_x = -0.1 #dropbox_position[0]
-                # Add olace pose bias for each object
-                if arm_name.data == 'right':
-                    dropbox_y = dropbox_position[1] - 0.10 + target_count_right*0.1             
-                else:
-                    dropbox_y = dropbox_position[1] - 0.10 + target_count_left*0.03
-                dropbox_z = dropbox_position[2] + 0.1
-                place_pose.position.x = np.float(dropbox_x)
-                place_pose.position.y = np.float(dropbox_y)
-                place_pose.position.z = np.float(dropbox_z)           
+# Assign the arm and 'place_pose' to be used for pick_place
+for index in range(0, len(object_list_param)):
+    if object_list_param[index]['name'] == target.label:
+        object_group = object_list_param[index]['group']
+for ii in range(0, len(dropbox_param)):
+    if dropbox_param[ii]['group'] == object_group:
+        arm_name.data = dropbox_param[ii]['name']
+        dropbox_position = dropbox_param[ii]['position']
+        dropbox_x = -0.1 #dropbox_position[0]
+        # Add olace pose bias for each object
+        if arm_name.data == 'right':
+            dropbox_y = dropbox_position[1] - 0.10 + target_count_right*0.1             
+        else:
+            dropbox_y = dropbox_position[1] - 0.10 + target_count_left*0.03
+        dropbox_z = dropbox_position[2] + 0.1
+        place_pose.position.x = np.float(dropbox_x)
+        place_pose.position.y = np.float(dropbox_y)
+        place_pose.position.z = np.float(dropbox_z)           
 ```
 
 ```
-			if resp.success:
-                if arm_name.data == 'right':
-                    target_count_right += 1
-                    if target_count_right == 3:
-                        target_count_right = 0.5
-                else:
-                    target_count_left += 1
+if resp.success:
+    if arm_name.data == 'right':
+        target_count_right += 1
+    if target_count_right == 3:
+        arget_count_right = 0.5
+    else:
+        target_count_left += 1
 ```
 
 
