@@ -13,7 +13,9 @@ Train a deep neural network to drive a car on  winding road autonoumosly.
 # Behavioral Cloning
 
 ---
+
 github repo https://github.com/gwwang16/CarND-Behavioral-Cloning-P3
+
 ![alt text][gif]
 
 ### Features:
@@ -25,7 +27,6 @@ github repo https://github.com/gwwang16/CarND-Behavioral-Cloning-P3
 
 
 [//]: # "Image References"
-
 [nvidia_model]: /images/portfolio/behavior-clone/nvidia_model.png
 [t1]: /images/portfolio/behavior-clone/t1_img.png
 [t2]: /images/portfolio/behavior-clone/t2_img.png
@@ -136,6 +137,7 @@ model.compile(loss='mse', optimizer=optimizer)
 ```
 
 The model for track2 is used nvidia model immediately cause I found it performs better on track2. And the image flip method is removed cause the image is not symmetrical on track2.
+
 ```
 model2 = Sequential()
 model2.add(Cropping2D(cropping=((40,20),(0,0)), input_shape=(160,320,3)))
@@ -202,7 +204,7 @@ Track 2: https://youtu.be/JaKkGIGe4zo
 
 The trained model on track1 can perfectly run with 30 MPH.  
 
-But the model on track2 will stuck in 1-2 places.  
+But the model on track2 will be  stuck in 1-2 places.  
 
 ### Further improvement
 The trained model still cannot perform perfectly on track2, I increased those particular data pieces and fine tuned on them again, but this one's and that's broken.
