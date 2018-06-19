@@ -1,6 +1,6 @@
 ---
 title: "3D Perception and Classification"
-excerpt: "Identify target objects on a tabletop, and pick up and place them in corresponding drop boxes using PR2.<br/><img src='/images/portfolio/pr2-perception/search-return/pick_list_3_result.jpg'>"
+excerpt: "Identify target objects on a tabletop, and pick up and place them in corresponding drop boxes using PR2.<br/><img src='/images/portfolio/pr2-perception/pick_list_3_result.jpg'>"
 collection: portfolio
 ---
 
