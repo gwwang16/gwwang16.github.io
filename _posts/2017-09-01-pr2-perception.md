@@ -9,7 +9,7 @@ tags:
 
 Given a cluttered tabletop scenario, perform object segmentation on 3D point cloud data using python-pcl to leverage the power of the Point Cloud Library, then identify target objects from a “Pick-List” in a particular order, pick up those objects and place them in corresponding drop boxes.
 
-github repo https://github.com/gwwang16/RoboND-Perception-Project
+Github repo https://github.com/gwwang16/RoboND-Perception-Project
 
 
 ## Project: Perception Pick & Place
