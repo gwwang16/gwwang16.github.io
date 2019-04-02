@@ -10,7 +10,9 @@ redirect_from:
 
 <br/>
 
-Hi, welcome to my personal page. I am working at College of Mechanical Engineering, Guizhou University.
+Hi, welcome to my personal page. 
+
+I am working at College of Mechanical Engineering, Guizhou University.
 
 
 ## Research
