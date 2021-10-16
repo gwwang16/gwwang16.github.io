@@ -9,13 +9,21 @@ redirect_from:
 ---
 
 <br/>
+## About
+Hi, I'm Guangwei Wang, an Assistant Professor at Guizhou University in the School of Mechanical Engineering. My research area includes nonlinear control and precise manipulation, however, I have just enough expertise in autonomous vehicle and robotics to make trouble.
 
-Hi, welcome to my personal page. 
+## Work Experience
+* 04/2019 - present: Assistant Professor, Guizhou University, China
 
-I am working at College of Mechanical Engineering, Guizhou University.
+## Education
+* Ph.D. in Electromechanical Engineering, University of Macau, China, 2018
+* M.Sc. in Mechanical Engineering, Guihzou University, China, 2015
+* B.Sc. in Mechanical Engineering, Gusihzou University, China, 2012
 
 
-## Research
+
+
+<!-- ## Research
 
 My research topics include Micro/Nanorobotics, Biological Manipulation, Intelligent Control, Autonomous Vehicle, etc.
 Check my research at [Publications](/publications/) and [CV](/cv/) sections.
@@ -30,7 +38,7 @@ Besides my research works, I have completed several online degrees from Udacity.
 - [x] <a href="https://www.udacity.com/course/robotics-software-engineer--nd209" target="_blank">Robotics Nanodegree</a>, Udacity (Classroom Mentor & Project Reviewer)
 - [x] Self-Driving Car Nanodegree, Udacity
 - [x] Computer Vision Nanodegree, Udacity
-- [ ] Data Scientist, Udacity
+- [ ] Data Scientist, Udacity -->
 
 You can find me more on <a href="https://github.com/gwwang16" target="_blank">GitHub</a>, <a href="https://www.linkedin.com/in/wangguangwei" target="_blank">Linkedin</a>, or <a href="https://scholar.google.com/citations?user=2y82dCoAAAAJ&hl" target="_blank">Google Scholar</a>.
 
