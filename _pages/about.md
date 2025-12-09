@@ -1,4 +1,11 @@
 ---
+permalink: /
+author_profile: true
+redirect_from:
+	- /about/
+	- /about.html
+---
+
 ## About
 I am an Associate Professor in the School of Mechanical Engineering at Guizhou University. My work focuses on path planning and safety control for intelligent and connected vehicles, as well as intelligent control for precision manipulation and compliant constant-force mechanisms. I recruit academic-track master’s students in Mechatronics and Vehicle Engineering, and professional master’s students in Mechanical Engineering; candidates with mechanical, control, or computing backgrounds are welcome.
 
