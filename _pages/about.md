@@ -21,4 +21,6 @@ I am an Associate Professor in the School of Mechanical Engineering at Guizhou U
 
 You can find me more on <a href="https://github.com/gwwang16" target="_blank">GitHub</a> or <a href="https://scholar.google.com/citations?user=2y82dCoAAAAJ&hl" target="_blank">Google Scholar</a>.
 
+[Visit my university homepage](https://mech.gzu.edu.cn/_s292/2020/0817/c11377a138796/page.psp){: .btn .btn--primary }
+
 > I have no special talents. I am only passionately curious.
