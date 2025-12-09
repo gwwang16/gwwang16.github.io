@@ -1,6 +1,7 @@
 ---
 permalink: /
 author_profile: true
+title: " "
 redirect_from:
   - /about/
   - /about.html
@@ -11,7 +12,7 @@ I am an Associate Professor in the School of Mechanical Engineering at Guizhou U
 
 ## Research Interests
 - Path planning and safety control for intelligent and connected vehicles
-- Intelligent control for precision manipulation; compliant constant-force mechanism design and applications
+- Intelligent control for precision manipulation
 
 ## Work and Education Experience
 - 2022.12 – Present: Associate Professor, School of Mechanical Engineering, Guizhou University
@@ -19,8 +20,6 @@ I am an Associate Professor in the School of Mechanical Engineering at Guizhou U
 - 2019.04 – 2022.12: Lecturer, School of Mechanical Engineering, Guizhou University
 - 2015.08 – 2018.07: Ph.D., Electromechanical Engineering, University of Macau
 
-You can find me more on <a href="https://github.com/gwwang16" target="_blank">GitHub</a> or <a href="https://scholar.google.com/citations?user=2y82dCoAAAAJ&hl" target="_blank">Google Scholar</a>.
-
-[Visit my university homepage](https://mech.gzu.edu.cn/_s292/2020/0817/c11377a138796/page.psp){: .btn .btn--primary }
+You can find me more on <a href="https://github.com/gwwang16" target="_blank">GitHub</a>, <a href="https://scholar.google.com/citations?user=2y82dCoAAAAJ&hl" target="_blank">Google Scholar</a>, or <a href="https://mech.gzu.edu.cn/_s292/2020/0817/c11377a138796/page.psp" target="_blank">University Homepage</a>.
 
 > I have no special talents. I am only passionately curious.
