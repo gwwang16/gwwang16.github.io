@@ -1,0 +1,12 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import PublicationItem from './PublicationItem.astro';
+interface Props {
+  papers: CollectionEntry<'papers'>[];
+}
+const { papers } = Astro.props;
+---
+
+<ol class="publication-list">
+  {papers.map((paper) => <PublicationItem paper={paper} />)}
+</ol>

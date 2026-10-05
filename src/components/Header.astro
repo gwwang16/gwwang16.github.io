@@ -1,0 +1,67 @@
+---
+import Icon from './Icon.astro';
+import { profile } from '../data/profile';
+const links = [
+  { label: 'Research', href: '/#research' },
+  { label: 'Publications', href: '/publications/' },
+  { label: 'Background', href: '/#background' },
+  { label: 'Teaching', href: '/#teaching' },
+  { label: 'Contact', href: '/#contact' },
+];
+const isCurrent = (href: string) =>
+  !href.includes('#') && Astro.url.pathname.startsWith(href);
+---
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="/" aria-label="Guangwei Wang, home"
+      ><span class="brand-mark" aria-hidden="true">gw<span>.</span></span><span
+        class="brand-name">Guangwei Wang</span
+      ></a
+    >
+    <nav class="desktop-navigation" aria-label="Main navigation">
+      {
+        links.map(({ label, href }) => (
+          <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+    <a class="header-contact" href={profile.links.university}
+      >University profile <Icon name="external" /></a
+    >
+    <details class="mobile-navigation">
+      <summary>Menu <span aria-hidden="true">＋</span></summary>
+      <nav aria-label="Mobile navigation">
+        {
+          links.map(({ label, href }) => (
+            <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
+              {label}
+            </a>
+          ))
+        }
+        <a href={profile.links.university}
+          >University profile <Icon name="external" /></a
+        >
+      </nav>
+    </details>
+  </div>
+</header>
+<script>
+  const navigation =
+    document.querySelector<HTMLDetailsElement>('.mobile-navigation');
+  navigation?.addEventListener('click', (event) => {
+    if ((event.target as Element).closest('a')) navigation.open = false;
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && navigation?.open) {
+      navigation.open = false;
+      navigation.querySelector('summary')?.focus();
+    }
+  });
+  document.addEventListener('click', (event) => {
+    if (navigation?.open && !navigation.contains(event.target as Node))
+      navigation.open = false;
+  });
+</script>

@@ -1,0 +1,17 @@
+---
+import { profile } from '../data/profile';
+---
+
+<script
+  is:inline
+  async
+  src={`https://www.googletagmanager.com/gtag/js?id=${profile.analyticsId}`}
+></script>
+<script is:inline define:vars={{ analyticsId: profile.analyticsId }}>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    window.dataLayer.push(arguments);
+  }
+  gtag('js', new Date());
+  gtag('config', analyticsId);
+</script>

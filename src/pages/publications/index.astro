@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PublicationList from '../../components/PublicationList.astro';
+import Icon from '../../components/Icon.astro';
+import { selectedPapers } from '../../lib/content';
+import { profile } from '../../data/profile';
+const papers = await selectedPapers();
+---
+
+<BaseLayout
+  title="Selected publications"
+  description="Selected first-author and corresponding-author papers by Guangwei Wang on intelligent vehicles, precision control, and compliant mechanisms."
+>
+  <div class="container archive-page publication-page">
+    <header class="page-heading">
+      <p class="eyebrow">PUBLICATIONS</p><h1>
+        Selected publications<span>.</span>
+      </h1>
+      <p>
+        Major first-author and corresponding-author papers, listed from newest
+        to oldest. Titles link directly to the published articles.
+      </p>
+      <div class="publication-actions">
+        <a class="text-link" href={profile.links.scholar}
+          >Google Scholar <Icon name="external" /></a
+        >
+        <a class="text-link" href={profile.links.researchgate}
+          >ResearchGate <Icon name="external" /></a
+        >
+        <a class="text-link" href="/publications.bib" download
+          >Download BibTeX <Icon name="download" /></a
+        >
+      </div>
+    </header>
+    <p class="citation-legend">
+      <strong>Wang G / 王广玮</strong> = Guangwei Wang; <span>*</span> = corresponding
+      author.
+    </p>
+    <PublicationList papers={papers} />
+  </div>
+</BaseLayout>

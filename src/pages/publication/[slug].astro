@@ -1,0 +1,24 @@
+---
+import type { InferGetStaticPropsType } from 'astro';
+import MovedPage from '../../components/MovedPage.astro';
+import { publishedPapers } from '../../lib/content';
+export async function getStaticPaths() {
+  const ids: Record<string, string> = {
+    '2017-04-26-tmech': 'microinjection-control-2017',
+    '2017-08-14-advanced-robotics': 'microinjection-feedback-2017',
+    '2017-08-25-asjc': 'adaptive-terminal-control-2018',
+  };
+  return (await publishedPapers()).map((entry) => ({
+    params: {
+      slug: entry.data.permalink
+        .replace(/^\/publication\//, '')
+        .replace(/\/$/, ''),
+    },
+    props: { destination: `/publications/#${ids[entry.id]}` },
+  }));
+}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { destination } = Astro.props;
+---
+
+<MovedPage destination={destination} />

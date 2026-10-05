@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import type { InferGetStaticPropsType } from 'astro';
+import MovedPage from '../../components/MovedPage.astro';
+import { earlyWorkForArticle } from '../../lib/content';
+export async function getStaticPaths() {
+  return (await getCollection('articles')).map((entry) => ({
+    params: {
+      slug: entry.data.permalink.replace(/^\/posts\//, '').replace(/\/$/, ''),
+    },
+    props: { destination: earlyWorkForArticle(entry.data.permalink) },
+  }));
+}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { destination } = Astro.props;
+---
+
+<MovedPage destination={destination} />

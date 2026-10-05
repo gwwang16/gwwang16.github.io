@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EarlyWorkItem from '../../components/EarlyWorkItem.astro';
+import { earlyWork } from '../../lib/content';
+const projects = await earlyWork();
+---
+
+<BaseLayout
+  title="Earlier work"
+  description="A concise collection of Guangwei Wang’s early student projects in ROS, perception, autonomous driving, and robotic learning."
+>
+  <div class="container archive-page early-work-page">
+    <header class="page-heading">
+      <p class="eyebrow">EARLIER WORK · STUDENT PROJECTS</p><h1>
+        Small builds<span>.</span>
+      </h1>
+      <p>
+        Early learning projects in ROS, autonomous driving, and robotics. Each
+        is summarized here with its original code or demo where available.
+      </p>
+      <a class="text-link" href="/#research">Explore my current research →</a>
+    </header>
+    <div class="early-work-list">
+      {projects.map((project) => <EarlyWorkItem project={project} />)}
+    </div>
+  </div>
+</BaseLayout>

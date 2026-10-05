@@ -1,0 +1,84 @@
+---
+import '@fontsource-variable/manrope';
+import '@fontsource/source-sans-3/latin-400.css';
+import '@fontsource/source-sans-3/latin-600.css';
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import Analytics from '../components/Analytics.astro';
+import { profile } from '../data/profile';
+import { getImage } from 'astro:assets';
+import portrait from '../assets/guangwei-wang.jpg';
+
+const portraitImage = await getImage({
+  src: portrait,
+  width: 512,
+  format: 'jpg',
+});
+const portraitUrl = new URL(portraitImage.src, profile.site).href;
+
+interface Props {
+  title?: string;
+  description?: string;
+  noindex?: boolean;
+}
+const {
+  title,
+  description = profile.description,
+  noindex = false,
+} = Astro.props;
+const pageTitle = title
+  ? `${title} · ${profile.name}`
+  : `${profile.name} · Intelligent vehicles & precision control`;
+const canonical = new URL(Astro.url.pathname, profile.site).href;
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: profile.name,
+  alternateName: profile.chineseName,
+  email: profile.email,
+  url: profile.site,
+  image: portraitUrl,
+  jobTitle: profile.role,
+  worksFor: { '@type': 'CollegeOrUniversity', name: profile.university },
+  sameAs: [
+    profile.links.github,
+    profile.links.scholar,
+    profile.links.researchgate,
+    profile.links.orcid,
+    profile.links.university,
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#eef3f7" />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/images/favico.ico" sizes="any" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={profile.name} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={portraitUrl} />
+    <meta name="twitter:card" content="summary" />
+    <title>{pageTitle}</title>
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(person).replace(/</g, '\\u003c')}
+    />
+    {import.meta.env.PROD && <Analytics />}
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <Header />
+    <main id="main-content" tabindex="-1"><slot /></main>
+    <Footer />
+  </body>
+</html>

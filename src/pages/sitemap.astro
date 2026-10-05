@@ -1,0 +1,42 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { researchAreas, earlyWork } from '../lib/content';
+const areas = await researchAreas();
+const projects = await earlyWork();
+---
+
+<BaseLayout title="Sitemap">
+  <div class="container">
+    <article class="article-shell">
+      <header class="page-heading">
+        <p class="eyebrow">FIND YOUR WAY</p><h1>Sitemap<span>.</span></h1>
+      </header>
+      <h2>Pages</h2><ul class="sitemap-list">
+        <li><a href="/">Home</a></li><li>
+          <a href="/publications/">Selected publications</a>
+        </li>
+        <li><a href="/projects/">Earlier work</a></li><li>
+          <a href="/terms/">Privacy policy</a>
+        </li>
+      </ul>
+      <h2>Research</h2><ul class="sitemap-list">
+        {
+          areas.map((area) => (
+            <li>
+              <a href={`/research/${area.id}/`}>{area.data.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+      <h2>Earlier work</h2><ul class="sitemap-list">
+        {
+          projects.map((project) => (
+            <li>
+              <a href={`/projects/#${project.id}`}>{project.title}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </article>
+  </div>
+</BaseLayout>

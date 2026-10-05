@@ -1,0 +1,297 @@
+[
+  {
+    "id": "fuel-cell-altitude-2026",
+    "title": "High-altitude adaptive net power optimization of fuel cell systems using deep reinforcement learning",
+    "authors": [
+      "Bieshu Jin",
+      "Tianfeng Tang",
+      "Zhongkun Xiao",
+      "Chaoyi Chen",
+      "Bo Wang",
+      "Qing Shi",
+      "Jin Zhao",
+      "Guangwei Wang"
+    ],
+    "year": 2026,
+    "journal": "Energy",
+    "doi": "10.1016/j.energy.2026.141442",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1016/j.energy.2026.141442",
+      "authorship": "https://mech.gzu.edu.cn/2026/0416/c23422a272715/page.htm",
+      "note": "University faculty profile explicitly marks Guangwei Wang as corresponding author."
+    },
+    "volume": "359",
+    "pages": "141442",
+    "featuredOrder": 1
+  },
+  {
+    "id": "prescribed-time-control-2026",
+    "title": "Prescribed-time sliding mode control for nanopositioning stages via extended state observer",
+    "authors": ["Chunbiao Yang", "Bo Wang", "Jin Zhao", "Guangwei Wang"],
+    "year": 2026,
+    "journal": "Journal of Vibration and Control",
+    "doi": "10.1177/10775463261450890",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1177/10775463261450890",
+      "authorship": "https://mech.gzu.edu.cn/2026/0416/c23422a272715/page.htm",
+      "note": "University faculty profile explicitly marks Guangwei Wang as corresponding author."
+    },
+    "pages": "10775463261450890",
+    "online": true,
+    "featuredOrder": 2
+  },
+  {
+    "id": "multi-terrain-rrt-2026",
+    "title": "Multi-terrain RRT*: Terrain Aware Path Planning for Off-Road Environments",
+    "authors": [
+      "Qianlong Peng",
+      "Jin Zhao",
+      "Qingwen Meng",
+      "Chaoyi Chen",
+      "Qing Xu",
+      "Jianqiang Wang",
+      "Guangwei Wang"
+    ],
+    "year": 2026,
+    "journal": "Automotive Innovation",
+    "doi": "10.1007/s42154-025-00431-2",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1007/s42154-025-00431-2",
+      "authorship": "https://mech.gzu.edu.cn/2026/0416/c23422a272715/page.htm",
+      "note": "University faculty profile explicitly marks Guangwei Wang as corresponding author."
+    },
+    "online": true,
+    "featuredOrder": 3
+  },
+  {
+    "id": "mountain-driving-2025",
+    "title": "Autonomous Driving on Mountain Roads via an Adaptive Deep Reinforcement Learning Approach",
+    "authors": [
+      "Yu Yan",
+      "Chengxi Zhang",
+      "Jin Wu",
+      "Chen Sun",
+      "Qingwen Meng",
+      "Chaoyi Chen",
+      "Jianqiang Wang",
+      "Guangwei Wang"
+    ],
+    "year": 2025,
+    "journal": "Journal of Intelligent and Connected Vehicles",
+    "doi": "10.26599/JICV.2026.9210069",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.26599/JICV.2026.9210069",
+      "authorship": "https://mech.gzu.edu.cn/2026/0416/c23422a272715/page.htm",
+      "note": "University faculty profile explicitly marks Guangwei Wang as corresponding author. Publisher issue is 2025, 8(4), despite 2026 in DOI."
+    },
+    "volume": "8",
+    "issue": "4",
+    "pages": "9210069",
+    "featuredOrder": 4
+  },
+  {
+    "id": "fuel-cell-energy-management-2024",
+    "title": "Energy management of fuel cell hybrid electric bus in mountainous regions: A deep reinforcement learning approach considering terrain characteristics",
+    "authors": [
+      "Tianfeng Tang",
+      "Qianlong Peng",
+      "Qing Shi",
+      "Qingguo Peng",
+      "Jin Zhao",
+      "Chaoyi Chen",
+      "Guangwei Wang"
+    ],
+    "year": 2024,
+    "journal": "Energy",
+    "doi": "10.1016/j.energy.2024.133313",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1016/j.energy.2024.133313",
+      "authorship": "https://mech.gzu.edu.cn/2026/0416/c23422a272715/page.htm",
+      "note": "University faculty profile explicitly marks Guangwei Wang as corresponding author."
+    },
+    "volume": "311",
+    "pages": "133313",
+    "featuredOrder": 5
+  },
+  {
+    "id": "adjustable-microgripper-2024",
+    "title": "Design and Evaluation of an Adjustable Compliant Constant-Force Microgripper",
+    "authors": [
+      "Jiahang He",
+      "Yinong Liu",
+      "Chunbiao Yang",
+      "Zongdi Tong",
+      "Guangwei Wang"
+    ],
+    "year": 2024,
+    "journal": "Micromachines",
+    "doi": "10.3390/mi15010052",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.3390/mi15010052",
+      "authorship": "https://www.mdpi.com/2072-666X/15/1/52",
+      "note": "Publisher explicitly marks Guangwei Wang as corresponding author. Publisher citation year is 2024; online release was 26 December 2023."
+    },
+    "volume": "15",
+    "issue": "1",
+    "pages": "52"
+  },
+  {
+    "id": "constant-force-optimization-2023",
+    "title": "Automatic Optimization for Compliant Constant Force Mechanisms",
+    "authors": ["Zongdi Tong", "Xiaozhi Zhang", "Guangwei Wang"],
+    "year": 2023,
+    "journal": "Actuators",
+    "doi": "10.3390/act12020061",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.3390/act12020061",
+      "authorship": "https://www.mdpi.com/2076-0825/12/2/61",
+      "note": "Publisher explicitly marks Guangwei Wang as corresponding author."
+    },
+    "volume": "12",
+    "issue": "2",
+    "pages": "61"
+  },
+  {
+    "id": "robust-nanopositioning-2023",
+    "title": "Robust tracking for nanopositioning stages using sliding mode control with active disturbance rejection: Design and implementation",
+    "authors": ["Guangwei Wang", "Bo Wang", "Jin Zhao", "Meng Tao"],
+    "year": 2023,
+    "journal": "Journal of Vibration and Control",
+    "doi": "10.1177/10775463221106016",
+    "roles": ["first", "corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1177/10775463221106016",
+      "authorship": "https://bwang-ccny.github.io/files/Papers/JVC-2023.pdf",
+      "note": "The published paper's first page explicitly lists Guangwei Wang first and identifies him as corresponding author. Final issue: 2023, 29(15–16): 3809–3822; first online in 2022."
+    },
+    "volume": "29",
+    "issue": "15-16",
+    "pages": "3809-3822",
+    "featuredOrder": 6
+  },
+  {
+    "id": "fixed-time-control-2021",
+    "title": "Fixed-Time Third-Order Super-Twisting-like Sliding Mode Motion Control for Piezoelectric Nanopositioning Stage",
+    "authors": ["Guangwei Wang", "Bo Wang", "Chengxi Zhang"],
+    "year": 2021,
+    "journal": "Mathematics",
+    "doi": "10.3390/math9151770",
+    "roles": ["first", "corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.3390/math9151770",
+      "authorship": "https://www.mdpi.com/2227-7390/9/15/1770",
+      "note": "Publisher lists Guangwei Wang first and marks him as corresponding author."
+    },
+    "volume": "9",
+    "issue": "15",
+    "pages": "1770"
+  },
+  {
+    "id": "adaptive-terminal-control-2018",
+    "title": "Adaptive Terminal Sliding Mode Control for Motion Tracking of a Micropositioning System",
+    "authors": ["Guangwei Wang", "Qingsong Xu"],
+    "year": 2018,
+    "journal": "Asian Journal of Control",
+    "doi": "10.1002/asjc.1614",
+    "roles": ["first"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1002/asjc.1614",
+      "authorship": "https://doi.org/10.1002/asjc.1614",
+      "note": "Publisher author list confirms first authorship."
+    },
+    "volume": "20",
+    "issue": "3",
+    "pages": "1241-1252"
+  },
+  {
+    "id": "microinjection-control-2017",
+    "title": "Design and Precision Position/Force Control of a Piezo-Driven Microinjection System",
+    "authors": ["Guangwei Wang", "Qingsong Xu"],
+    "year": 2017,
+    "journal": "IEEE/ASME Transactions on Mechatronics",
+    "doi": "10.1109/TMECH.2017.2698139",
+    "roles": ["first"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1109/TMECH.2017.2698139",
+      "authorship": "https://ieeexplore.ieee.org/document/7912296/",
+      "note": "Publisher author list confirms first authorship."
+    },
+    "volume": "22",
+    "issue": "4",
+    "pages": "1744-1754"
+  },
+  {
+    "id": "microinjection-feedback-2017",
+    "title": "Design and development of a piezo-driven microinjection system with force feedback",
+    "authors": ["Guangwei Wang", "Qingsong Xu"],
+    "year": 2017,
+    "journal": "Advanced Robotics",
+    "doi": "10.1080/01691864.2017.1362996",
+    "roles": ["first"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://api.crossref.org/works/10.1080/01691864.2017.1362996",
+      "authorship": "https://www.tandfonline.com/doi/full/10.1080/01691864.2017.1362996",
+      "note": "Publisher author list confirms first authorship."
+    },
+    "volume": "31",
+    "issue": "23-24",
+    "pages": "1349-1359"
+  },
+  {
+    "id": "parking-trajectory-2026",
+    "title": "基于时空联合搜索的动态避障泊车轨迹规划方法",
+    "authors": ["金别树", "刘晓博", "肖忠坤", "许庆", "王广玮"],
+    "year": 2026,
+    "volume": "17",
+    "issue": "4",
+    "pages": "494–502",
+    "doi": "10.3969/j.issn.1674-8484.2026.04.008",
+    "journal": "汽车安全与节能学报",
+    "language": "zh-CN",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://www.journalase.com/CN/10.3969/j.issn.1674-8484.2026.04.008",
+      "authorship": "https://www.journalase.com/CN/10.3969/j.issn.1674-8484.2026.04.008",
+      "note": "Journal citation and author notes explicitly identify 王广玮 as corresponding author."
+    }
+  },
+  {
+    "id": "lidar-segmentation-2024",
+    "title": "基于多尺度注意力机制的实时激光雷达点云语义的分割",
+    "authors": ["张晨", "刘畅", "赵津", "王广玮", "许庆"],
+    "year": 2024,
+    "volume": "15",
+    "issue": "4",
+    "pages": "591–601",
+    "doi": "10.3969/j.issn.1674-8484.2024.04.016",
+    "journal": "汽车安全与节能学报",
+    "language": "zh-CN",
+    "roles": ["corresponding"],
+    "verifiedOn": "2026-10-05",
+    "sources": {
+      "metadata": "https://www.journalase.com/CN/10.3969/j.issn.1674-8484.2024.04.016",
+      "authorship": "https://www.journalase.com/CN/10.3969/j.issn.1674-8484.2024.04.016",
+      "note": "Journal citation and author notes explicitly identify 王广玮 as corresponding author."
+    }
+  }
+]

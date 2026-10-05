@@ -1,0 +1,43 @@
+---
+import { allProjects } from '../lib/content';
+export async function getStaticPaths() {
+  const aliases = [
+    ['/about/', '/'],
+    ['/blog/', '/'],
+    ['/portfolio/', '/projects/'],
+    ['/categories/', '/projects/'],
+    ['/tags/', '/projects/'],
+    ['/page-archive/', '/sitemap/'],
+    ['/collection-archive/', '/sitemap/'],
+  ];
+  for (const { data } of await allProjects())
+    aliases.push([data.legacyPath, `/projects/#${data.slug}`]);
+  return aliases.map(([from, to]) => ({
+    params: { legacy: from.replace(/^\//, '').replace(/\/$/, '') },
+    props: { destination: to },
+  }));
+}
+const { destination } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head
+    ><meta charset="utf-8" /><meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    /><meta http-equiv="refresh" content={`0;url=${destination}`} /><meta
+      name="robots"
+      content="noindex, follow"
+    /><link
+      rel="canonical"
+      href={new URL(destination, 'https://www.guangwei.wang').href}
+    /><title>Page moved · Guangwei Wang</title></head
+  ><body
+    ><main>
+      <h1>This page has moved.</h1><p>
+        <a href={destination}>Continue to the new page</a>
+      </p>
+    </main></body
+  >
+</html>

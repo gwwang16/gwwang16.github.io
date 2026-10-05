@@ -1,0 +1,15 @@
+---
+import type { InferGetStaticPropsType } from 'astro';
+import MovedPage from '../../components/MovedPage.astro';
+import { allProjects } from '../../lib/content';
+export async function getStaticPaths() {
+  return (await allProjects()).map(({ data }) => ({
+    params: { slug: data.slug },
+    props: { destination: `/projects/#${data.slug}` },
+  }));
+}
+type Props = InferGetStaticPropsType<typeof getStaticPaths>;
+const { destination } = Astro.props;
+---
+
+<MovedPage destination={destination} />
