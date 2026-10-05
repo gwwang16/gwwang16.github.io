@@ -41,7 +41,7 @@ Each research Markdown document creates a standalone route and homepage summary.
 | `/projects/<slug>/`, `/posts/<original-path>/` | Redirect to the corresponding `/projects/#id`                                                                                 |
 | `/publication/<original-slug>/`                | Redirect to the corresponding updated citation                                                                                |
 | `/notes/`                                      | Redirect to the early-work collection                                                                                         |
-| `/terms/`                                      | Original privacy policy                                                                                                       |
+| `/terms/`                                      | Current privacy information for hosting, analytics, and contact                                                               |
 | `/sitemap/`, `/sitemap-index.xml`              | Human and crawler indexes                                                                                                     |
 | `/404.html`                                    | Recovery page for GitHub Pages                                                                                                |
 
@@ -50,6 +50,8 @@ Old about, portfolio, and taxonomy routes remain compatible. GitHub Pages has no
 ## Content and evidence
 
 The immutable migration manifest covers nineteen original bodies: six articles, seven projects, five publications, and privacy. These remain in source. The user requested condensed student work, so original tutorials are not rendered on the public site. The home-service robot article contributes the eighth early-work item. Two historical publication drafts remain private; they are not silently assumed published.
+
+`src/content/pages/privacy.md` supplies the current `/terms/` page. Its text describes the existing GitHub Pages hosting and Analytics integration. The original privacy policy stays in the archive and is not rendered.
 
 Current profile facts, funding, courses, mentoring, portrait, public email, and university URL come from the faculty profile updated in April 2026. Recent publications were discovered through the correct Guizhou University ResearchGate profile and checked against publishers / Crossref. Google Scholar’s existing link is retained, but its direct page returned HTTP 429 during verification. See [SOURCES.md](SOURCES.md) and each paper’s source fields.
 

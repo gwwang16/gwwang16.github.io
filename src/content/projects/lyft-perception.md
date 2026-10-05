@@ -1,5 +1,5 @@
 ---
-title: Lyft Perception Challenge
+title: Semantic segmentation (Lyft challenge)
 collection: portfolio
 slug: lyft-perception
 category: Vehicles

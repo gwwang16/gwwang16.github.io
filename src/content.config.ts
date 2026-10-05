@@ -31,8 +31,6 @@ const research = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string(),
-    icon: z.enum(['trajectory', 'precision']),
-    topics: z.array(z.string()),
     papers: z.array(z.string()),
     order: z.number().int(),
   }),

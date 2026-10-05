@@ -7,16 +7,12 @@ const projects = await earlyWork();
 
 <BaseLayout
   title="Earlier projects"
-  description="A concise collection of Guangwei Wang’s early student projects in ROS, perception, autonomous driving, and robotic learning."
+  description="Guangwei Wang’s student projects in ROS, autonomous driving, and robot learning, with source code and demonstrations."
 >
   <div class="container archive-page early-work-page">
     <header class="page-heading">
       <h1>Earlier projects</h1>
-      <p>
-        Early learning projects in ROS, autonomous driving, and robotics. Each
-        is summarized here with its original code or demo where available.
-      </p>
-      <a href="/#research">Current research</a>
+      <p>Student work in ROS, autonomous driving, and robot learning.</p>
     </header>
     <div class="early-work-list">
       {projects.map((project) => <EarlyWorkItem project={project} />)}

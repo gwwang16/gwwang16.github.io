@@ -1,5 +1,5 @@
 ---
-title: Behavioral Cloning
+title: Steering by behavioral cloning
 collection: portfolio
 slug: behavioral-cloning
 category: Vehicles

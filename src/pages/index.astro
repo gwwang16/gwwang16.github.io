@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ResearchVisual from '../components/ResearchVisual.astro';
 import ResearchItem from '../components/ResearchItem.astro';
 import PublicationList from '../components/PublicationList.astro';
+import CitationLegend from '../components/CitationLegend.astro';
 import ExperienceItem from '../components/ExperienceItem.astro';
 import GrantItem from '../components/GrantItem.astro';
 import CourseItem from '../components/CourseItem.astro';
@@ -55,12 +56,9 @@ const areas = await researchAreas();
   <section class="section container" aria-labelledby="publications-heading">
     <div class="section-heading">
       <h2 id="publications-heading">Selected publications</h2>
-      <a href="/publications/">All selected publications</a>
+      <a href="/publications/">More publications</a>
     </div>
-    <p class="citation-legend">
-      First-author and corresponding-author papers. <strong>Wang G</strong> = Guangwei
-      Wang; * = corresponding author.
-    </p>
+    <CitationLegend />
     <PublicationList papers={papers} />
   </section>
 
@@ -105,20 +103,17 @@ const areas = await researchAreas();
       {profile.mentoring.map((result) => <MentoringItem {...result} />)}
     </ul>
     <p class="book-note">
-      Co-authored book: <span lang="zh-CN">{profile.book.title}</span>{
-        ` (${profile.book.translation}). ${profile.book.publisher}, ${profile.book.year}. `
-      }
-      <a href={profile.links.university}>Details</a>
+      Book: <span lang="zh-CN"
+        >{`${profile.book.authors}. `}<em>{profile.book.title}</em></span
+      >{`. ${profile.book.publisher}, ${profile.book.year}.`}
     </p>
   </section>
 
   <section class="section container" aria-labelledby="early-work-heading">
     <h2 id="early-work-heading">Earlier projects</h2>
     <p>
-      Student projects in ROS, perception, autonomous driving, and robot
-      learning are summarized in the <a href="/projects/"
-        >earlier project collection</a
-      >.
+      Student work in ROS, autonomous driving, and robot learning.{' '}
+      <a href="/projects/">Browse projects</a>.
     </p>
   </section>
 

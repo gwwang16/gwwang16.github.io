@@ -26,15 +26,17 @@ npm run preview
 
 - `src/data/profile.ts`: current biography, appointments, funded projects, teaching, recruitment, public contact, and academic links.
 - `src/content/selected-publications.json`: selected first-author / corresponding-author papers. Each record includes full authors, final citation metadata, DOI, verified author roles, and source URLs. Never infer correspondence from author order.
-- `src/content/research/*.md`: research overviews and future results. Add a Markdown document with `title`, `summary`, `icon`, `topics`, related `papers` IDs, and `order`; it gets its own research page and homepage entry.
+- `src/content/research/*.md`: research overviews and results. Add a Markdown document with `title`, `summary`, related `papers` IDs, and `order`; it gets its own research page and homepage entry.
 - `src/content/projects/*.md`: metadata for concise early-work summaries. Their original bodies remain archived in source; they are not rendered as long tutorials.
 - `src/content/articles/*.md` and `src/content/publications/*.md`: original source archive and legacy URL metadata. Existing links resolve to the relevant early-work summary or updated citation.
-- `src/content/pages/terms.md`: original privacy policy.
+- `src/content/pages/privacy.md`: current privacy information at `/terms/`. The original policy remains archived in `terms.md`.
 - `public/images/`, `public/files/`: preserved public images and the historical CV. The current portrait is `src/assets/guangwei-wang.jpg` and is optimized at build time.
 
 For a new paper, verify its role against a publisher author note or the university profile, add complete metadata and sources, and reference its ID from the relevant research overview. Set `featuredOrder` only for representative papers to show on the homepage. New entries automatically join the bibliography and downloadable `/publications.bib`.
 
 English remains the main language, with the Chinese name, project titles, course names, and Chinese-journal citations retained. [docs/SOURCES.md](docs/SOURCES.md) records provenance and citation-year corrections.
+
+[docs/CONTENT-REVIEW.md](docs/CONTENT-REVIEW.md) records the content assessment and priorities for new research material.
 
 Schemas in `src/content.config.ts` validate content. Layout/components live in `src/layouts`, `src/components`, and `src/pages`. Visual tokens are owned by `src/styles/global.css` and documented in [DESIGN.md](DESIGN.md).
 

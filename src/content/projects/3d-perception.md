@@ -1,5 +1,5 @@
 ---
-title: 3D Perception and Classification
+title: 3D object perception
 collection: portfolio
 slug: 3d-perception
 category: Robotics

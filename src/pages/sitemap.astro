@@ -5,7 +5,10 @@ const areas = await researchAreas();
 const projects = await earlyWork();
 ---
 
-<BaseLayout title="Sitemap">
+<BaseLayout
+  title="Sitemap"
+  description="Pages, research areas, publications, and earlier projects on Guangwei Wang’s academic website."
+>
   <div class="container">
     <article class="article-shell">
       <header class="page-heading">
@@ -15,7 +18,7 @@ const projects = await earlyWork();
         <li><a href="/">Home</a></li><li>
           <a href="/publications/">Selected publications</a>
         </li>
-        <li><a href="/projects/">Earlier work</a></li><li>
+        <li><a href="/projects/">Earlier projects</a></li><li>
           <a href="/terms/">Privacy policy</a>
         </li>
       </ul>
@@ -28,7 +31,7 @@ const projects = await earlyWork();
           ))
         }
       </ul>
-      <h2>Earlier work</h2><ul class="sitemap-list">
+      <h2>Earlier projects</h2><ul class="sitemap-list">
         {
           projects.map((project) => (
             <li>

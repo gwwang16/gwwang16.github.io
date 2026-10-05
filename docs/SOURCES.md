@@ -1,6 +1,6 @@
 # Academic content sources
 
-Checked on **5 October 2026**. This is the source record for the refactor, not a claim that every publication or achievement is listed.
+Checked on **5 October 2026**.
 
 ## Profile and research
 
@@ -11,6 +11,8 @@ Checked on **5 October 2026**. This is the source record for the refactor, not a
 - [Faculty portrait](https://mech.gzu.edu.cn/_upload/tpl/0d/dd/3549/template3549/assets/teacher/WangGuangWei.jpg): current image from the faculty profile. The source photo is preserved and Astro generates compressed responsive images.
 
 English descriptions paraphrase the published research scope. English institution/project/course/book titles are descriptive translations where the faculty page supplies only Chinese wording. Original Chinese funded-project titles are shown alongside those translations.
+
+Research summaries describe the methods and applications of the cited papers. The book entry uses the original Chinese title and author list from the faculty profile. Earlier-project display titles describe their tasks; their original bodies and source links remain archived.
 
 ## Selected publications
 
@@ -51,3 +53,13 @@ Eight early-work summaries are grounded in the original seven portfolios and six
 The original site supplies appointment dates. The current faculty page confirms the positions and institutions without specifying those dates.
 
 Other ResearchGate papers and preprints are not automatically imported. Coauthorship or last-author position alone does not establish correspondence. The two historical unpublished/draft records remain private. No publication counts, impact factors, citation metrics, patent claims, or future achievements are invented or automatically scraped into the UI.
+
+## Privacy information
+
+The current privacy page describes the hosting and integration implemented in `src/components/Analytics.astro` and `src/layouts/BaseLayout.astro`:
+
+- [GitHub Pages data collection](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection): visitor IP addresses are logged for security purposes.
+- [Google Analytics 4 cookie usage](https://support.google.com/analytics/answer/11397207): tags can use first-party cookies to distinguish visitors and sessions.
+- [Google Privacy Policy](https://policies.google.com/privacy): linked for Google's processing practices.
+
+The old policy's Disqus and advertising descriptions do not match the current implementation. Its original body is archived; the public route uses the current text.

@@ -1,5 +1,5 @@
 ---
-title: IIWA Kinematics
+title: KUKA iiwa inverse kinematics
 collection: portfolio
 slug: iiwa-kinematics
 category: Robotics

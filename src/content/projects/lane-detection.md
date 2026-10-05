@@ -1,5 +1,5 @@
 ---
-title: Advanced Lane Finding
+title: Lane detection
 collection: portfolio
 slug: lane-detection
 category: Vehicles

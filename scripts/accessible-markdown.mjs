@@ -15,7 +15,6 @@ export const animationPosters = {
     '/images/portfolio/semantic-segmentation/semantic-segmentation.png',
 };
 
-/** Improve legacy Markdown at build time without rewriting the archived source. */
 export function accessibleMarkdown() {
   return (tree) => {
     function walk(parent) {

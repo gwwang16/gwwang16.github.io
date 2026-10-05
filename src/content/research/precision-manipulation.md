@@ -1,8 +1,6 @@
 ---
 title: Precision manipulation
-summary: Robust motion control for micro/nano positioning and compliant constant-force mechanisms for delicate manipulation.
-icon: precision
-topics: [Robust control, Nanopositioning, Compliant mechanisms]
+summary: Robust micro/nano motion control and compliant constant-force mechanisms.
 papers:
   [
     prescribed-time-control-2026,
@@ -15,16 +13,10 @@ papers:
 order: 2
 ---
 
-My precision-manipulation research combines control design with compliant mechanisms. The common goal is to manage motion and interaction forces in applications where small positioning errors or excessive forces matter.
+## Micro/nano motion control
 
-## Robust micro/nano motion control
-
-We develop sliding-mode and observer-based control methods for piezoelectric positioning stages, including active disturbance rejection, fixed-time convergence, and prescribed-time tracking. The published work includes both controller development and experimental implementation for nanopositioning systems.
+We develop sliding-mode and observer-based control for piezoelectric positioning stages, including active disturbance rejection, fixed-time convergence, and prescribed-time tracking. Earlier work addresses precision position/force control and force feedback in cell microinjection.
 
 ## Compliant constant-force mechanisms
 
-We study automatic optimization of compliant constant-force structures and adjustable microgrippers. This line of work uses mechanical compliance to shape the interaction force, complementing the control-based approaches developed in our earlier force-feedback microinjection research.
-
-## Current project
-
-An ongoing National Natural Science Foundation of China project studies structure optimization and control of compliant constant-force microgrippers for highly dynamic micro/nano manipulation, running from 2023 to 2026.
+We study automatic optimization of compliant constant-force mechanisms and the design and evaluation of adjustable constant-force microgrippers.

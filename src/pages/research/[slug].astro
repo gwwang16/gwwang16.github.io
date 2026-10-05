@@ -4,6 +4,7 @@ import type { InferGetStaticPropsType } from 'astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import ArticleContent from '../../components/ArticleContent.astro';
 import PublicationList from '../../components/PublicationList.astro';
+import CitationLegend from '../../components/CitationLegend.astro';
 import { researchAreas, selectedPapers } from '../../lib/content';
 export async function getStaticPaths() {
   return (await researchAreas()).map((area) => ({
@@ -37,15 +38,11 @@ const papers = (await selectedPapers()).filter((paper) =>
       <ArticleContent><Content /></ArticleContent>
       <section class="related-papers" aria-labelledby="related-papers-heading">
         <h2 id="related-papers-heading">Selected papers</h2>
-        <p class="citation-legend">
-          <strong>Wang G / 王广玮</strong> = Guangwei Wang; * = corresponding author.
-        </p>
+        <CitationLegend />
         <PublicationList papers={papers} />
       </section>
       <div class="article-back">
-        <a class="text-link" href="/publications/"
-          >All selected publications →</a
-        >
+        <a class="text-link" href="/publications/">More publications</a>
       </div>
     </article>
   </div>

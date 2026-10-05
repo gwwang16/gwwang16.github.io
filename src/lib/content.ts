@@ -36,7 +36,6 @@ export async function earlyWork() {
     title: data.title,
     description: data.description,
     image: data.image,
-    technologies: data.technologies,
     repository: data.repository,
     demo:
       data.slug === 'search-and-sample-return'
@@ -45,15 +44,14 @@ export async function earlyWork() {
   }));
   projects.push({
     id: 'home-service-robot',
-    title: 'Home Service Robot',
+    title: 'Home service robot',
     description:
       'A ROS simulation combining SLAM, localization, and navigation to pick up and deliver objects.',
     image: '/images/portfolio/home-service-robot.png',
-    technologies: ['ROS', 'SLAM', 'Navigation'],
     repository: 'https://github.com/gwwang16/Home-Service-Robot',
     demo: undefined,
   });
-  return projects;
+  return projects.sort((a, b) => a.title.localeCompare(b.title, 'en'));
 }
 
 export function earlyWorkForArticle(permalink: string) {
@@ -74,15 +72,6 @@ export async function allArticles() {
   return (await getCollection('articles')).sort(
     (a, b) => b.data.date.getTime() - a.data.date.getTime(),
   );
-}
-
-export function formatDate(date: Date) {
-  return new Intl.DateTimeFormat('en', {
-    month: 'short',
-    day: 'numeric',
-    year: 'numeric',
-    timeZone: 'UTC',
-  }).format(date);
 }
 
 export function articlePath(permalink: string) {

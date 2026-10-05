@@ -1,11 +1,10 @@
 ---
-title: Search And Sample Return Project
+title: Rover mapping and sample search
 collection: portfolio
 slug: search-and-sample-return
 category: Robotics
 image: /images/portfolio/search-return/final_results.png
-description: Autonomous mapping and sample search in a rover simulation inspired by
-  the NASA sample return challenge.
+description: Autonomous mapping and sample search in a rover simulation.
 technologies:
 - Perception
 - Mapping

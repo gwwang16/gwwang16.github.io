@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import PublicationList from '../../components/PublicationList.astro';
+import CitationLegend from '../../components/CitationLegend.astro';
 import { selectedPapers } from '../../lib/content';
 import { profile } from '../../data/profile';
 const papers = await selectedPapers();
@@ -13,20 +14,13 @@ const papers = await selectedPapers();
   <div class="container archive-page publication-page">
     <header class="page-heading">
       <h1>Selected publications</h1>
-      <p>
-        Major first-author and corresponding-author papers, listed from newest
-        to oldest. Titles link directly to the published articles.
-      </p>
       <div class="publication-actions">
         <a href={profile.links.scholar}>Google Scholar</a>
         <a href={profile.links.researchgate}>ResearchGate</a>
         <a href="/publications.bib" download>Download BibTeX</a>
       </div>
     </header>
-    <p class="citation-legend">
-      <strong>Wang G / 王广玮</strong> = Guangwei Wang; <span>*</span> = corresponding
-      author.
-    </p>
+    <CitationLegend />
     <PublicationList papers={papers} />
   </div>
 </BaseLayout>

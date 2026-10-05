@@ -1,5 +1,5 @@
 ---
-title: DeepRL Robot Arm
+title: Robot arm reinforcement learning
 collection: portfolio
 slug: deep-rl-robot-arm
 category: Robotics

@@ -273,9 +273,6 @@ strong {
 .research-item p {
   margin: 4px 0 0;
 }
-.research-item a {
-  white-space: nowrap;
-}
 .publication-list {
   margin: 0;
   padding-left: 28px;
@@ -557,10 +554,6 @@ address {
 }
 .early-work-item p {
   margin-block: 4px;
-}
-.early-work-tools {
-  color: var(--color-muted);
-  font-size: 13px;
 }
 .early-work-item .text-link {
   margin-right: 16px;

@@ -7,9 +7,6 @@ const { area } = Astro.props;
 ---
 
 <li class="research-item">
-  <h3>{area.data.title}</h3>
-  <p>
-    {area.data.summary}{' '}
-    <a href={`/research/${area.id}/`}>Research overview</a>
-  </p>
+  <h3><a href={`/research/${area.id}/`}>{area.data.title}</a></h3>
+  <p>{area.data.summary}</p>
 </li>

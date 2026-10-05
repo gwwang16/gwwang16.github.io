@@ -67,6 +67,8 @@ The primary readers are research collaborators and prospective postgraduate stud
 
 English is the existing site language. Preserve the Chinese name, original funded-project titles, course names, and Chinese-journal citations with appropriate language attributes. Facts and author roles come from the university and publisher records in `docs/SOURCES.md`. Avoid promotional slogans, publication-count displays, empty future-result placeholders, and commercial landing-page conventions.
 
+Public copy states academic facts directly. Keep appointments in the timeline and funding in its own section. Research overviews describe problems and methods supported by their citations. Omit editing/migration narratives, instructions explaining ordinary links, repeated profile facts, and redundant technology tags. Authorship and citation-year verification notes belong in source records. The privacy page describes the services used by the current site.
+
 Token ownership uses Model B: `src/styles/global.css` is the canonical runtime source. This document mirrors accepted values; `tests/design.test.mjs` checks the mapping. Shared layouts and citation components keep every public page consistent.
 
 ## Colors
@@ -85,7 +87,7 @@ Use the native Arial / Helvetica stack with script-capable fallbacks. No web fon
 
 Use a centered 960px document with a 24px minimum desktop margin and 16px phone margin. Section spacing is 28px. The body is a single column; small date columns organize funding and appointments on desktop and stack on phones. Heading rules create structure without cards or colored panels.
 
-The profile combines name, position, institution, email, academic links, and a short biography. A 120px portrait sits beside the identity block, reducing to 100px or 80px on narrow screens. Preserve its aspect ratio and use optimized responsive assets. Navigation is a plain text row without sticky behavior or a monogram. At 800px it becomes a native disclosure that expands in document flow.
+The profile combines name, position, institution, email, academic links, and a short statement of current responsibilities. A 120px portrait sits beside the identity block, reducing to 100px or 80px on narrow screens. Preserve its aspect ratio and use optimized responsive assets. Navigation is a plain text row without sticky behavior or a monogram. At 800px it becomes a native disclosure that expands in document flow.
 
 The homepage sequence is identity → research interests → representative references → funded projects → education and experience → teaching → an earlier-project collection link → contact. The separate bibliography contains all selected records. Earlier-project rows use small static thumbnails, short descriptions, and source/demo links.
 
@@ -101,7 +103,7 @@ The portrait is square-cornered. The 2px control radius applies only to technica
 
 ## Components
 
-Research interests are plain list entries with a short summary and link to a Markdown overview. Publication rows share one component across the homepage, bibliography, and research pages. The same records generate BibTeX. Author roles require evidence; last authorship alone is insufficient. Funded projects show dates, titles, funders, and original Chinese names without unsupported role claims.
+Research interests are plain list entries with a linked title and short summary. Publication rows and their concise authorship legend are shared across the homepage, bibliography, and research pages. The same records generate BibTeX. Author roles require evidence; last authorship alone is insufficient. Funded projects show dates, titles, funders, and original Chinese names without unsupported role claims.
 
 The academic appointment list preserves the original dates and overlapping positions. Courses and student achievements use ordinary bullet lists. The original book title is retained. Contact is a text section with recruitment information and office address, with email at the profile.
 

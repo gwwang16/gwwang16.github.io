@@ -9,12 +9,10 @@ export const profile = {
   email: 'gwwang@gzu.edu.cn',
   office:
     'Room 632, School of Mechanical Engineering, West Campus, Guizhou University, Huaxi, Guiyang, China',
-  leadership:
-    'Director, Institute of New Energy and Intelligent Transportation Systems',
   description:
-    'Guangwei Wang is an Associate Professor at Guizhou University, researching path planning and safety control for intelligent vehicles, and intelligent control for precision manipulation.',
+    'Guangwei Wang, Associate Professor at Guizhou University. Research in intelligent vehicles, precision motion control, and compliant mechanisms.',
   biography:
-    'I am an Associate Professor and master’s supervisor at Guizhou University, where I direct the Institute of New Energy and Intelligent Transportation Systems. I received my Ph.D. in Electromechanical Engineering from the University of Macau and completed postdoctoral research in the School of Vehicle and Mobility at Tsinghua University.',
+    'I supervise master’s students and direct the Institute of New Energy and Intelligent Transportation Systems.',
   recruitment:
     'I supervise academic master’s students in Vehicle Engineering and Mechatronics, professional master’s students in Mechanical Engineering, and postdoctoral researchers in related areas. Master’s co-supervision with Tsinghua University is also available.',
   analyticsId: 'G-141RDTBDLJ',
@@ -24,7 +22,6 @@ export const profile = {
     researchgate: 'https://www.researchgate.net/profile/Guangwei-Wang-3',
     university: 'https://mech.gzu.edu.cn/2026/0416/c23422a272715/page.htm',
     orcid: 'https://orcid.org/0000-0002-1794-0619',
-    cv: '/files/cv_gwwang_en.pdf',
   },
   grants: [
     {
@@ -86,8 +83,6 @@ export const profile = {
   ],
   book: {
     title: '智能车辆队列纵向与横向控制',
-    translation:
-      'Longitudinal and Lateral Control of Intelligent Vehicle Platoons',
     authors: '赵津、王广玮、石晴',
     publisher: 'Chongqing University Press',
     year: '2023',

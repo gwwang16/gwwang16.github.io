@@ -107,9 +107,10 @@ test('research overviews connect current work to the publication record', async 
   page,
 }) => {
   await page.goto('/');
-  const overview = page
-    .getByRole('link', { name: 'Research overview', exact: true })
-    .first();
+  const overview = page.getByRole('link', {
+    name: 'Intelligent vehicles',
+    exact: true,
+  });
   await overview.focus();
   await page.keyboard.press('Enter');
   await expect(page).toHaveURL(/\/research\/intelligent-vehicles\/$/);
@@ -120,7 +121,10 @@ test('research overviews connect current work to the publication record', async 
     6,
   );
   await expect(
-    page.getByRole('heading', { name: 'Current projects', exact: true }),
+    page.getByRole('heading', {
+      name: 'Motion planning and perception',
+      exact: true,
+    }),
   ).toBeVisible();
 });
 
@@ -133,7 +137,7 @@ test('early student work is condensed into one collection with source links', as
     expect((await project.innerText()).length).toBeLessThan(600);
   }
   await expect(
-    page.getByRole('link', { name: 'Source code for Home Service Robot' }),
+    page.getByRole('link', { name: 'Source code for Home service robot' }),
   ).toHaveAttribute('href', 'https://github.com/gwwang16/Home-Service-Robot');
   await page.screenshot({
     path: 'test-results/earlier-work-desktop.png',
