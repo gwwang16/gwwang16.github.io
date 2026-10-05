@@ -27,7 +27,7 @@ rounded:
   panel: '0px'
 spacing:
   page-width: '960px'
-  section-space: '28px'
+  section-space: '32px'
 components:
   document:
     backgroundColor: '{colors.background}'
@@ -73,23 +73,23 @@ Token ownership uses Model B: `src/styles/global.css` is the canonical runtime s
 
 ## Colors
 
-White carries all main content. The name and section headings use the dark blue accent; links use a slightly brighter blue with visible underlines. Grey-blue rules separate sections, navigation, and the footer. Charcoal body text and muted secondary metadata support long-form reading. Pale surfaces are reserved for technical tables, code, and animation controls, rather than alternating homepage bands.
+White carries all main content. The name and section headings use the dark blue accent; links use a slightly brighter blue with visible underlines. Hover and keyboard focus deepen link color and increase underline thickness from 1px to 2px. Grey-blue rules separate sections, navigation, and the footer. Charcoal body text and muted secondary metadata support long-form reading. Pale surfaces are reserved for technical tables, code, and animation controls, rather than alternating homepage bands.
 
 `colors.<name>` maps to `--color-<name>`. Scrollbar tokens define thumb, track, hover, and active colors with standards-based properties and WebKit fallbacks. Forced colors use system colors, and focus has a distinct blue outline.
 
 ## Typography
 
-Use the native Arial / Helvetica stack with script-capable fallbacks. No web fonts are required. Body text and references share 16px / 1.6. The homepage name is 32px, other page titles are 28px, section headings are 20px, and subsections are 16px. The name reduces to 26px on phones; bibliography text remains 16px.
+Use the native Arial / Helvetica stack with script-capable fallbacks. No web fonts are required. Body text and references share 16px / 1.6. Navigation uses 16px text at weight 500, with Home at weight 600. The homepage name is 32px, other page titles are 28px, section headings are 20px, and subsections are 16px. The name reduces to 26px on phones; bibliography text remains 16px.
 
 `typography.display`, `.body`, and `.mono` map to their font custom properties. Avoid exaggerated title sizes, decorative punctuation, uppercase section labels, and widely spaced lettering. Metadata uses 13–14px. References wrap naturally, abbreviate author names only when rendered, bold the researcher’s name, and mark verified correspondence with an asterisk. Full authors remain in data and BibTeX export.
 
 ## Layout
 
-Use a centered 960px document with a 24px minimum desktop margin and 16px phone margin. Section spacing is 28px. The body is a single column; small date columns organize funding and appointments on desktop and stack on phones. Heading rules create structure without cards or colored panels.
+Use a centered 960px document with a 24px minimum desktop margin and 16px phone margin. Section spacing is 32px. The body is a single column; small date columns organize funding and appointments on desktop and stack on phones. Heading rules create structure without cards or colored panels.
 
-The profile combines name, position, institution, readable obfuscated email, a short office location, and academic links. Keep contact details together near the top; omit a separate statement of supervision or administrative responsibilities. A 120px portrait sits beside the identity block, reducing to 100px or 80px on narrow screens. Preserve its aspect ratio and use optimized responsive assets. Navigation is a plain text row without sticky behavior or a monogram. At 800px it becomes a native disclosure that expands in document flow.
+The profile combines name, position, institution, readable obfuscated email, a short office location, and academic links. Keep contact details together near the top; omit a separate statement of supervision or administrative responsibilities. A 120px portrait sits beside the identity block, reducing to 100px or 80px on narrow screens. Preserve its aspect ratio and use optimized responsive assets. Navigation is a 64px text row with a thin bottom rule and restrained blue link indicators. At 800px it becomes a 52px native disclosure that expands in document flow.
 
-The homepage sequence is identity and contact → research interests → representative references → funded projects → education and experience → teaching → prospective students. The separate publications page groups books and selected papers under distinct headings. Earlier projects have a footer entry; their rows use small static thumbnails, short descriptions, and source/demo links.
+The homepage sequence is identity and contact → research interests → representative references → funded projects → education and experience → teaching → Join us. Use Join us consistently for the recruitment heading and desktop/mobile navigation; the invitation names master’s students and postdoctoral researchers. Preserve the existing `#prospective-students` anchor. The separate publications page shows selected papers first, followed by books, under distinct headings. Earlier projects have a footer entry; their rows use small static thumbnails, short descriptions, and source/demo links.
 
 `spacing.page-width` and `.section-space` map to their runtime custom properties. Document scrolling owns the page; code, tables, and long formulas may scroll locally. Hash-linked references and summaries remain visible.
 
@@ -113,7 +113,9 @@ Earlier-project summaries are readable without JavaScript and use small responsi
 
 The Markdown renderer supports highlighted code, math/MathML, accessible tables, static posters, and opt-in animation controls for future research content. Formula styles and animation scripts load only when the rendered content needs them. Animation failure returns to a poster, and reduced-motion changes pause playback.
 
-The native menu supports Escape, outside-click closing, and navigation closing without claiming modal behavior. Supplementary source/demo icons are hidden from assistive technology. The 404 page offers plain home and earlier-project recovery links. Print styles remove navigation and preserve readable citations.
+Navigation links use muted text at rest and the deeper primary-hover blue on hover, keyboard focus, and the current page. A 2px underline expands from the left on interaction and remains visible for the current page; font weights stay stable between these states. Desktop links have a 24px gap. Home is current on the homepage, and Research is current on research detail pages. The local `--navigation-duration` in `.header-inner` owns the 180ms color, underline, and menu-indicator transitions; the global reduced-motion rule disables their duration. The header stays in document flow.
+
+The native mobile menu uses a decorative two-line indicator that becomes a cross when expanded. It supports Escape, outside-click closing, and navigation closing without claiming modal behavior. Menu links keep a minimum 44px target height. Supplementary source/demo icons are hidden from assistive technology. The 404 page offers plain home and earlier-project recovery links. Print styles remove navigation and preserve readable citations.
 
 ## Do's and Don'ts
 

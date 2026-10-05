@@ -19,6 +19,10 @@ const papers = await selectedPapers();
         <a href="/publications.bib" download>Download BibTeX</a>
       </div>
     </header>
+    <section class="section" aria-labelledby="papers-heading">
+      <h2 id="papers-heading">Selected papers</h2>
+      <PublicationList papers={papers} />
+    </section>
     <section class="section" aria-labelledby="books-heading">
       <h2 id="books-heading">Books</h2>
       <ol class="publication-list">
@@ -44,10 +48,6 @@ const papers = await selectedPapers();
           </p>
         </li>
       </ol>
-    </section>
-    <section class="section" aria-labelledby="papers-heading">
-      <h2 id="papers-heading">Selected papers</h2>
-      <PublicationList papers={papers} />
     </section>
   </div>
 </BaseLayout>

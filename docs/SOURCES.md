@@ -12,6 +12,8 @@ Checked on **5 October 2026**.
 
 English descriptions paraphrase the published research scope. English institution/project/course/book titles are descriptive translations where the faculty page supplies only Chinese wording. Original Chinese funded-project titles are shown alongside those translations.
 
+Project terminology retains [minimally invasive safety control](https://arxiv.org/abs/2411.02186) and [compliant constant-force microgrippers](https://www.mdpi.com/2072-666X/15/1/52). For the bus project, the owner clarified that “全向” means combined longitudinal and lateral avoidance. Its concise English title uses “integrated,” consistent with [integrated collision avoidance using steering and braking](https://www.nature.com/articles/s41598-022-27296-3).
+
 Research summaries describe the methods and applications of the cited papers. The book entry uses the original Chinese title and author list from the faculty profile. Earlier-project display titles describe their tasks; their original bodies and source links remain archived.
 
 ## Selected publications

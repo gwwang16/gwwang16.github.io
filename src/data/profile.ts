@@ -25,27 +25,27 @@ export const profile = {
       period: '2026–2028',
       funder: 'National Natural Science Foundation of China',
       title:
-        'Minimally invasive safety arbitration for intelligent vehicles under time-varying constraints',
+        'Minimally invasive safety arbitration control for intelligent vehicles under multiple time-varying constraints',
       originalTitle: '面向时变多约束的智能车辆最小侵入式安全仲裁控制方法',
     },
     {
       period: '2023–2026',
       funder: 'National Natural Science Foundation of China',
       title:
-        'Structure optimization and control of compliant constant-force microgrippers for highly dynamic micro/nano manipulation',
+        'Structural optimization and control of compliant constant-force microgrippers for highly dynamic micro/nano manipulation',
       originalTitle: '面向大动态微纳操作的柔性恒力微夹钳结构优化与控制方法研究',
     },
     {
       period: '2026–2029',
       funder: 'Guizhou Provincial Science and Technology Support Program',
       title:
-        'Omnidirectional active collision avoidance for autonomous buses under multiple physical constraints',
+        'Integrated active collision avoidance for autonomous buses under multiple physical constraints',
       originalTitle: '基于多重物理约束的无人驾驶巴士全向主动避险系统研发',
     },
     {
       period: '2025–2026',
       funder: 'Industry collaboration',
-      title: 'Safety arbitration control systems for road vehicles',
+      title: 'Safety arbitration control system for road vehicles',
       originalTitle: '车辆行驶安全仲裁控制系统',
     },
   ],

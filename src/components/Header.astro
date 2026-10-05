@@ -4,16 +4,23 @@ const links = [
   { label: 'Publications', href: '/publications/' },
   { label: 'Background', href: '/#background' },
   { label: 'Teaching', href: '/#teaching' },
-  { label: 'Prospective students', href: '/#prospective-students' },
+  { label: 'Join us', href: '/#prospective-students' },
   { label: 'Contact', href: '/#contact' },
 ];
 const isCurrent = (href: string) =>
-  !href.includes('#') && Astro.url.pathname.startsWith(href);
+  href === '/#research'
+    ? Astro.url.pathname.startsWith('/research/')
+    : !href.includes('#') && Astro.url.pathname.startsWith(href);
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a class="home-link" href="/" aria-label="Guangwei Wang, home">Home</a>
+    <a
+      class="home-link"
+      href="/"
+      aria-label="Guangwei Wang, home"
+      aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Home</a
+    >
     <nav class="desktop-navigation" aria-label="Main navigation">
       {
         links.map(({ label, href }) => (
@@ -24,7 +31,9 @@ const isCurrent = (href: string) =>
       }
     </nav>
     <details class="mobile-navigation">
-      <summary>Menu</summary>
+      <summary
+        >Menu<span class="menu-indicator" aria-hidden="true"></span></summary
+      >
       <nav aria-label="Mobile navigation">
         {
           links.map(({ label, href }) => (

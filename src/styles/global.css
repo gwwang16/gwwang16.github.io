@@ -19,7 +19,7 @@
   --radius-control: 2px;
   --radius-panel: 0px;
   --page-width: 960px;
-  --section-space: 28px;
+  --section-space: 32px;
   color-scheme: light;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   scrollbar-width: auto;
@@ -82,8 +82,13 @@ a {
   cursor: pointer;
 }
 a:hover,
+a:focus-visible,
 a:active {
   color: var(--color-primary-hover);
+}
+a:hover,
+a:focus-visible {
+  text-decoration-thickness: 2px;
 }
 button,
 summary {
@@ -182,35 +187,62 @@ strong {
   transform: none;
 }
 .header-inner {
+  --navigation-duration: 180ms;
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 24px;
   align-items: center;
-  min-height: 56px;
+  min-height: 64px;
   border-bottom: 1px solid var(--color-border);
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
 }
-.home-link,
-.desktop-navigation a {
+.header-inner a {
+  position: relative;
   display: inline-flex;
   align-items: center;
-  min-height: 44px;
+  min-height: 64px;
+  color: var(--color-muted);
   text-decoration: none;
+  transition: color var(--navigation-duration) ease;
 }
-.home-link:hover,
-.desktop-navigation a:hover {
-  text-decoration: underline;
+.header-inner a::after {
+  position: absolute;
+  inset-inline: 0;
+  bottom: -1px;
+  height: 2px;
+  border-top: 2px solid currentColor;
+  content: '';
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition:
+    transform var(--navigation-duration) ease,
+    opacity var(--navigation-duration) ease;
+}
+.header-inner a:hover,
+.header-inner a:focus-visible,
+.header-inner a[aria-current] {
+  color: var(--color-primary-hover);
+}
+.header-inner a:active {
+  color: var(--color-primary-hover);
+}
+.header-inner a:hover::after,
+.header-inner a:focus-visible::after,
+.header-inner a[aria-current]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+.home-link {
+  font-weight: 600;
+  letter-spacing: 0.02em;
 }
 .desktop-navigation {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  gap: 0 20px;
-}
-.desktop-navigation a[aria-current='page'] {
-  color: var(--color-ink);
-  font-weight: 700;
-  text-decoration: underline;
+  gap: 0 24px;
 }
 .mobile-navigation {
   display: none;
@@ -568,7 +600,10 @@ address {
   .header-inner {
     gap: 16px;
     align-items: start;
-    min-height: 48px;
+    min-height: 52px;
+  }
+  .header-inner a {
+    min-height: 52px;
   }
   .desktop-navigation {
     display: none;
@@ -578,20 +613,67 @@ address {
     text-align: right;
   }
   .mobile-navigation summary {
-    min-height: 44px;
-    padding-block: 11px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 52px;
+    color: var(--color-muted);
+    list-style: none;
+    transition: color var(--navigation-duration) ease;
+  }
+  .mobile-navigation summary::-webkit-details-marker {
+    display: none;
+  }
+  .mobile-navigation summary:hover,
+  .mobile-navigation summary:focus-visible,
+  .mobile-navigation[open] summary {
+    color: var(--color-primary-hover);
+  }
+  .mobile-navigation summary:active {
+    color: var(--color-primary-hover);
+  }
+  .menu-indicator {
+    position: relative;
+    width: 16px;
+    height: 16px;
+  }
+  .menu-indicator::before,
+  .menu-indicator::after {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    width: 16px;
+    height: 1px;
+    border-top: 1px solid currentColor;
+    content: '';
+    transform: translateY(-3px);
+    transition: transform var(--navigation-duration) ease;
+  }
+  .menu-indicator::after {
+    transform: translateY(3px);
+  }
+  .mobile-navigation[open] .menu-indicator::before {
+    transform: rotate(45deg);
+  }
+  .mobile-navigation[open] .menu-indicator::after {
+    transform: rotate(-45deg);
   }
   .mobile-navigation nav {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 0 12px;
-    padding-bottom: 12px;
+    gap: 4px 14px;
+    padding-block: 8px 12px;
+    border-top: 1px solid var(--color-border);
     text-align: left;
   }
   .mobile-navigation nav a {
     display: flex;
     align-items: center;
     min-height: 44px;
+  }
+  .mobile-navigation nav a::after {
+    bottom: 4px;
+    width: 20px;
   }
 }
 
