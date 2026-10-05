@@ -37,7 +37,7 @@ test('home renders current academic content and supports keyboard skip navigatio
   page.on('pageerror', (error) => errors.push(error.message));
   await page.goto('/');
   await expect(
-    page.getByRole('heading', { name: 'Guangwei Wang.', exact: true }),
+    page.getByRole('heading', { name: 'Guangwei Wang', exact: true }),
   ).toBeVisible();
   await page.evaluate(() => document.fonts.ready);
   await page.keyboard.press('Tab');

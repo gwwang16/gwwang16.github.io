@@ -1,28 +1,8 @@
 ---
-import Icon from './Icon.astro';
 import { profile } from '../data/profile';
 ---
 
 <footer class="site-footer">
-  <div class="container footer-main">
-    <div>
-      <a class="footer-name" href="/">{profile.name}<span>.</span></a><p>
-        {profile.department}<br />{profile.university} · {profile.location}
-      </p>
-    </div>
-    <nav aria-label="Academic and social profiles">
-      <a href={profile.links.scholar}>Google Scholar <Icon name="external" /></a
-      >
-      <a href={profile.links.researchgate}
-        >ResearchGate <Icon name="external" /></a
-      >
-      <a href={profile.links.github}>GitHub <Icon name="external" /></a>
-      <a href={profile.links.orcid}>ORCID <Icon name="external" /></a>
-      <a href={profile.links.university}
-        >University profile <Icon name="external" /></a
-      >
-    </nav>
-  </div>
   <div class="container footer-bottom">
     <span>© {new Date().getFullYear()} {profile.name}</span><a href="/terms/"
       >Privacy policy</a

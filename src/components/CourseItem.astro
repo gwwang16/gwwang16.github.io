@@ -8,7 +8,6 @@ const { level, title, chineseTitle } = Astro.props;
 ---
 
 <li>
-  <span class="course-level">{level}</span><strong>{title}</strong><span
-    lang="zh-CN">{chineseTitle}</span
-  >
+  {title}{' '}(<span lang="zh-CN">{chineseTitle}</span>)
+  <span class="course-level"> — {level}</span>
 </li>

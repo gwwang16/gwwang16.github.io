@@ -4,6 +4,8 @@
 
 Astro generates a public academic site with static HTML, TypeScript, schema-validated content, and small progressive enhancements. A server application or client SPA is unnecessary for the research profile and bibliography. Individual interactive research demonstrations can be added later without changing this model.
 
+The shared presentation is a compact engineering faculty document. A native font stack, 960px single-column layout, thin section rules, and small portrait replace large promotional headings and cards. Deep blue text accents provide restrained decoration; academic lists and references determine the structure. Accepted visual decisions are documented in `DESIGN.md`.
+
 ```text
 src/data/profile.ts                    → biography, funding, teaching, contact
 src/content/selected-publications.json  → verified citation records and authorship

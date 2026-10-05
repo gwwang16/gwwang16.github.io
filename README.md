@@ -4,6 +4,8 @@ Academic website of Guangwei Wang (王广玮), Associate Professor at Guizhou Un
 
 Built with **Astro 7 and TypeScript**. Research, publications, and profile content are generated as static HTML. Reading and navigation work without a client framework or application server.
 
+The presentation follows a conventional engineering academic homepage: a compact single column, a small portrait, plain research and appointment lists, reference-style publications, and restrained blue headings and links. See [docs/previews](docs/previews) for desktop and phone screenshots.
+
 ## Local development
 
 Use Node.js 24 (minimum 22.12) and npm.

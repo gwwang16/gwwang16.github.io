@@ -30,13 +30,9 @@ const papers = (await selectedPapers()).filter((paper) =>
         </ol>
       </nav>
       <header class="article-heading">
-        <p class="eyebrow">RESEARCH OVERVIEW</p><h1>{area.data.title}</h1><p
-          class="article-description"
-        >
+        <h1>{area.data.title}</h1><p class="article-description">
           {area.data.summary}
-        </p><ul class="tags">
-          {area.data.topics.map((topic) => <li>{topic}</li>)}
-        </ul>
+        </p>
       </header>
       <ArticleContent><Content /></ArticleContent>
       <section class="related-papers" aria-labelledby="related-papers-heading">
