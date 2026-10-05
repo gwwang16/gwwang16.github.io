@@ -3,11 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import ResearchVisual from '../components/ResearchVisual.astro';
 import ResearchItem from '../components/ResearchItem.astro';
 import PublicationList from '../components/PublicationList.astro';
-import CitationLegend from '../components/CitationLegend.astro';
 import ExperienceItem from '../components/ExperienceItem.astro';
 import GrantItem from '../components/GrantItem.astro';
 import CourseItem from '../components/CourseItem.astro';
-import MentoringItem from '../components/MentoringItem.astro';
 import { profile } from '../data/profile';
 import { selectedPapers, researchAreas } from '../lib/content';
 const papers = (await selectedPapers())
@@ -19,7 +17,7 @@ const areas = await researchAreas();
 <BaseLayout>
   <section class="profile-section container" aria-labelledby="profile-heading">
     <div class="profile-header">
-      <div class="profile-details">
+      <div class="profile-details" id="contact">
         <div class="profile-name">
           <h1 id="profile-heading">{profile.name}</h1>
           <span lang="zh-CN">{profile.chineseName}</span>
@@ -28,7 +26,8 @@ const areas = await researchAreas();
         <p>
           {profile.department}<br />{profile.university}, {profile.location}
         </p>
-        <p>Email: <a href={`mailto:${profile.email}`}>{profile.email}</a></p>
+        <p class="profile-email">Email: {profile.emailDisplay}</p>
+        <p class="profile-office">Office: {profile.office}</p>
         <ul class="profile-links" aria-label="Academic profiles">
           <li><a href={profile.links.scholar}>Google Scholar</a></li>
           <li><a href={profile.links.researchgate}>ResearchGate</a></li>
@@ -39,7 +38,6 @@ const areas = await researchAreas();
       </div>
       <ResearchVisual />
     </div>
-    <p class="profile-intro">{profile.biography}</p>
   </section>
 
   <section
@@ -58,7 +56,6 @@ const areas = await researchAreas();
       <h2 id="publications-heading">Selected publications</h2>
       <a href="/publications/">More publications</a>
     </div>
-    <CitationLegend />
     <PublicationList papers={papers} />
   </section>
 
@@ -93,37 +90,18 @@ const areas = await researchAreas();
     id="teaching"
     aria-labelledby="teaching-heading"
   >
-    <h2 id="teaching-heading">Teaching and student supervision</h2>
-    <h3>Courses</h3>
+    <h2 id="teaching-heading">Teaching</h2>
     <ul class="course-list">
       {profile.courses.map((course) => <CourseItem {...course} />)}
     </ul>
-    <h3>Selected student achievements</h3>
-    <ul class="mentoring-list">
-      {profile.mentoring.map((result) => <MentoringItem {...result} />)}
-    </ul>
-    <p class="book-note">
-      Book: <span lang="zh-CN"
-        >{`${profile.book.authors}. `}<em>{profile.book.title}</em></span
-      >{`. ${profile.book.publisher}, ${profile.book.year}.`}
-    </p>
-  </section>
-
-  <section class="section container" aria-labelledby="early-work-heading">
-    <h2 id="early-work-heading">Earlier projects</h2>
-    <p>
-      Student work in ROS, autonomous driving, and robot learning.{' '}
-      <a href="/projects/">Browse projects</a>.
-    </p>
   </section>
 
   <section
     class="section container"
-    id="contact"
-    aria-labelledby="contact-heading"
+    id="prospective-students"
+    aria-labelledby="prospective-students-heading"
   >
-    <h2 id="contact-heading">Contact and prospective students</h2>
+    <h2 id="prospective-students-heading">Prospective students</h2>
     <p>{profile.recruitment}</p>
-    <address><strong>Office:</strong> {profile.office}</address>
   </section>
 </BaseLayout>

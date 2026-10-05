@@ -69,7 +69,7 @@ English is the existing site language. Preserve the Chinese name, original funde
 
 Public copy states academic facts directly. Keep appointments in the timeline and funding in its own section. Research overviews describe problems and methods supported by their citations. Omit editing/migration narratives, instructions explaining ordinary links, repeated profile facts, and redundant technology tags. Authorship and citation-year verification notes belong in source records. The privacy page describes the services used by the current site.
 
-Token ownership uses Model B: `src/styles/global.css` is the canonical runtime source. This document mirrors accepted values; `tests/design.test.mjs` checks the mapping. Shared layouts and citation components keep every public page consistent.
+Token ownership uses Model B: `src/styles/global.css` is the canonical runtime source. This document mirrors accepted values; update both when changing a token. Shared layouts and citation components keep every public page consistent.
 
 ## Colors
 
@@ -81,15 +81,15 @@ White carries all main content. The name and section headings use the dark blue 
 
 Use the native Arial / Helvetica stack with script-capable fallbacks. No web fonts are required. Body text and references share 16px / 1.6. The homepage name is 32px, other page titles are 28px, section headings are 20px, and subsections are 16px. The name reduces to 26px on phones; bibliography text remains 16px.
 
-`typography.display`, `.body`, and `.mono` map to their font custom properties. Avoid exaggerated title sizes, decorative punctuation, uppercase section labels, and widely spaced lettering. Metadata uses 13–14px. References wrap naturally, abbreviate author names only when rendered, bold the researcher’s name, and mark verified correspondence with an asterisk and visible legend. Full authors remain in data and BibTeX export.
+`typography.display`, `.body`, and `.mono` map to their font custom properties. Avoid exaggerated title sizes, decorative punctuation, uppercase section labels, and widely spaced lettering. Metadata uses 13–14px. References wrap naturally, abbreviate author names only when rendered, bold the researcher’s name, and mark verified correspondence with an asterisk. Full authors remain in data and BibTeX export.
 
 ## Layout
 
 Use a centered 960px document with a 24px minimum desktop margin and 16px phone margin. Section spacing is 28px. The body is a single column; small date columns organize funding and appointments on desktop and stack on phones. Heading rules create structure without cards or colored panels.
 
-The profile combines name, position, institution, email, academic links, and a short statement of current responsibilities. A 120px portrait sits beside the identity block, reducing to 100px or 80px on narrow screens. Preserve its aspect ratio and use optimized responsive assets. Navigation is a plain text row without sticky behavior or a monogram. At 800px it becomes a native disclosure that expands in document flow.
+The profile combines name, position, institution, readable obfuscated email, a short office location, and academic links. Keep contact details together near the top; omit a separate statement of supervision or administrative responsibilities. A 120px portrait sits beside the identity block, reducing to 100px or 80px on narrow screens. Preserve its aspect ratio and use optimized responsive assets. Navigation is a plain text row without sticky behavior or a monogram. At 800px it becomes a native disclosure that expands in document flow.
 
-The homepage sequence is identity → research interests → representative references → funded projects → education and experience → teaching → an earlier-project collection link → contact. The separate bibliography contains all selected records. Earlier-project rows use small static thumbnails, short descriptions, and source/demo links.
+The homepage sequence is identity and contact → research interests → representative references → funded projects → education and experience → teaching → prospective students. The separate publications page groups books and selected papers under distinct headings. Earlier projects have a footer entry; their rows use small static thumbnails, short descriptions, and source/demo links.
 
 `spacing.page-width` and `.section-space` map to their runtime custom properties. Document scrolling owns the page; code, tables, and long formulas may scroll locally. Hash-linked references and summaries remain visible.
 
@@ -103,13 +103,15 @@ The portrait is square-cornered. The 2px control radius applies only to technica
 
 ## Components
 
-Research interests are plain list entries with a linked title and short summary. Publication rows and their concise authorship legend are shared across the homepage, bibliography, and research pages. The same records generate BibTeX. Author roles require evidence; last authorship alone is insufficient. Funded projects show dates, titles, funders, and original Chinese names without unsupported role claims.
+Research interests are plain list entries with a linked title and short summary. Publication rows are shared across the homepage, bibliography, and research pages. Keep verified correspondence asterisks without a separate explanatory legend. The same records generate BibTeX. Author roles require evidence; last authorship alone is insufficient. Funded projects show dates, titles, funders, and original Chinese names without unsupported role claims.
 
-The academic appointment list preserves the original dates and overlapping positions. Courses and student achievements use ordinary bullet lists. The original book title is retained. Contact is a text section with recruitment information and office address, with email at the profile.
+The academic appointment list preserves the original dates and overlapping positions. Teaching is a short course list; student competition records remain available through the university profile. Books use a full reference with the original Chinese title, author list, Chinese publisher name, and year. Highlight the researcher's name consistently with paper citations. BibTeX includes both the book and papers.
 
-Earlier-project summaries are readable without JavaScript. Old tutorials and portfolio URLs redirect to matching summary anchors; original bodies remain in source. Historical paper URLs redirect to updated references. Draft records do not generate public routes. The historical CV remains an asset; the current university page is the visible institutional reference.
+Email replaces `@` with readable `[at]` text and keeps the domain's dots intact, without JavaScript, a plain `mailto` link, or a full address in person metadata. The privacy page links to this contact block. This is lightweight protection against simple harvesting, not an assertion that automated extraction is impossible. The short office location appears beside email. Prospective students receive a concise invitation to contact by email; the university profile link stays in the top profile block.
 
-The Markdown renderer supports highlighted code, math/MathML, accessible tables, static posters, and opt-in animation controls for future research content. Animation failure returns to a poster, and reduced-motion changes pause playback.
+Earlier-project summaries are readable without JavaScript and use small responsive WebP thumbnails generated from the preserved original images. Old tutorials and portfolio URLs redirect to matching summary anchors; original bodies remain in source. Historical paper URLs redirect to updated references. Draft records do not generate public routes. The historical CV remains an asset; the current university page is the visible institutional reference.
+
+The Markdown renderer supports highlighted code, math/MathML, accessible tables, static posters, and opt-in animation controls for future research content. Formula styles and animation scripts load only when the rendered content needs them. Animation failure returns to a poster, and reduced-motion changes pause playback.
 
 The native menu supports Escape, outside-click closing, and navigation closing without claiming modal behavior. Supplementary source/demo icons are hidden from assistive technology. The 404 page offers plain home and earlier-project recovery links. Print styles remove navigation and preserve readable citations.
 

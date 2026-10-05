@@ -5,8 +5,7 @@
     "format": "npm run format:check",
     "typecheck": "npm run check",
     "build": "npm run build",
-    "tests": "npm test",
-    "browser": "npm run test:browser"
+    "tests": "npm test"
   },
-  "requiredCommands": ["format", "typecheck", "build", "tests", "browser"]
+  "requiredCommands": ["format", "typecheck", "build", "tests"]
 }

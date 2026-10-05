@@ -6,15 +6,12 @@ export const profile = {
   university: 'Guizhou University',
   location: 'Guiyang, China',
   site: 'https://www.guangwei.wang',
-  email: 'gwwang@gzu.edu.cn',
-  office:
-    'Room 632, School of Mechanical Engineering, West Campus, Guizhou University, Huaxi, Guiyang, China',
+  emailDisplay: 'gwwang [at] gzu.edu.cn',
+  office: 'Room 632, School of Mechanical Engineering, West Campus',
   description:
     'Guangwei Wang, Associate Professor at Guizhou University. Research in intelligent vehicles, precision motion control, and compliant mechanisms.',
-  biography:
-    'I supervise master’s students and direct the Institute of New Energy and Intelligent Transportation Systems.',
   recruitment:
-    'I supervise academic master’s students in Vehicle Engineering and Mechatronics, professional master’s students in Mechanical Engineering, and postdoctoral researchers in related areas. Master’s co-supervision with Tsinghua University is also available.',
+    'Master’s students and postdoctoral researchers are welcome to contact me by email.',
   analyticsId: 'G-141RDTBDLJ',
   links: {
     github: 'https://github.com/gwwang16',
@@ -82,9 +79,10 @@ export const profile = {
     },
   ],
   book: {
+    id: 'vehicle-platoon-control-2023',
     title: '智能车辆队列纵向与横向控制',
-    authors: '赵津、王广玮、石晴',
-    publisher: 'Chongqing University Press',
+    authors: ['赵津', '王广玮', '石晴'],
+    publisher: '重庆大学出版社',
     year: '2023',
   },
   experience: [

@@ -24,7 +24,7 @@ npm run preview
 
 ## Updating academic content
 
-- `src/data/profile.ts`: current biography, appointments, funded projects, teaching, recruitment, public contact, and academic links.
+- `src/data/profile.ts`: appointments, funded projects, teaching, recruitment, book metadata, public contact, and academic links. `emailDisplay` replaces `@` with readable `[at]` text and keeps the domain intact; keep the plain address out of generated HTML, `mailto` links, and structured metadata.
 - `src/content/selected-publications.json`: selected first-author / corresponding-author papers. Each record includes full authors, final citation metadata, DOI, verified author roles, and source URLs. Never infer correspondence from author order.
 - `src/content/research/*.md`: research overviews and results. Add a Markdown document with `title`, `summary`, related `papers` IDs, and `order`; it gets its own research page and homepage entry.
 - `src/content/projects/*.md`: metadata for concise early-work summaries. Their original bodies remain archived in source; they are not rendered as long tutorials.
@@ -32,7 +32,9 @@ npm run preview
 - `src/content/pages/privacy.md`: current privacy information at `/terms/`. The original policy remains archived in `terms.md`.
 - `public/images/`, `public/files/`: preserved public images and the historical CV. The current portrait is `src/assets/guangwei-wang.jpg` and is optimized at build time.
 
-For a new paper, verify its role against a publisher author note or the university profile, add complete metadata and sources, and reference its ID from the relevant research overview. Set `featuredOrder` only for representative papers to show on the homepage. New entries automatically join the bibliography and downloadable `/publications.bib`.
+For a new paper, verify its role against a publisher author note or the university profile, add complete metadata and sources, and reference its ID from the relevant research overview. Set `featuredOrder` only for representative papers to show on the homepage. New entries automatically join the bibliography and downloadable `/publications.bib`. Books have their own section on `/publications/` and a corresponding BibTeX entry.
+
+The homepage keeps courses and recruitment concise. The university profile is linked from the top contact block. Competition records remain in the profile source and university page rather than the homepage. Earlier projects are accessible from the footer.
 
 English remains the main language, with the Chinese name, project titles, course names, and Chinese-journal citations retained. [docs/SOURCES.md](docs/SOURCES.md) records provenance and citation-year corrections.
 
@@ -44,13 +46,11 @@ Schemas in `src/content.config.ts` validate content. Layout/components live in `
 
 ```sh
 npm run validate
-npx playwright install chromium --only-shell
-npm run test:browser
 ```
 
-Checks cover formatting, TypeScript, static builds, original-body integrity, draft exclusion, legacy redirects, bibliography metadata/export, internal links/assets, research references, academic timeline, and design-token drift. Real Chromium tests cover keyboard navigation, native mobile menus, no-JavaScript use, citation links, 320/768/1440px layouts, and automated WCAG checks. Test requests to the existing Google Analytics property are suppressed.
+This runs formatting, TypeScript, the static build, and two small content checks: unique paper IDs/DOIs with valid research references, and working internal links/assets/anchors. It does not freeze publication counts, dates, names, or page copy. Check desktop and phone layouts in the local preview when changing presentation or adding images.
 
-If the home directory is unwritable, set `ASTRO_TELEMETRY_DISABLED=1` and use a writable npm cache and `PLAYWRIGHT_BROWSERS_PATH`.
+If the home directory is unwritable, set `ASTRO_TELEMETRY_DISABLED=1` and use a writable npm cache.
 
 ## GitHub Pages deployment
 

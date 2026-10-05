@@ -7,12 +7,11 @@ const projects = await earlyWork();
 
 <BaseLayout
   title="Earlier projects"
-  description="Guangwei Wang’s student projects in ROS, autonomous driving, and robot learning, with source code and demonstrations."
+  description="Guangwei Wang’s earlier projects in ROS, autonomous driving, and robot learning, with source code and demonstrations."
 >
   <div class="container archive-page early-work-page">
     <header class="page-heading">
       <h1>Earlier projects</h1>
-      <p>Student work in ROS, autonomous driving, and robot learning.</p>
     </header>
     <div class="early-work-list">
       {projects.map((project) => <EarlyWorkItem project={project} />)}

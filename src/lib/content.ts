@@ -67,13 +67,3 @@ export function earlyWorkForArticle(permalink: string) {
   if (!id) throw new Error(`Unmapped early article: ${permalink}`);
   return `/projects/#${id}`;
 }
-
-export async function allArticles() {
-  return (await getCollection('articles')).sort(
-    (a, b) => b.data.date.getTime() - a.data.date.getTime(),
-  );
-}
-
-export function articlePath(permalink: string) {
-  return `${permalink.replace(/\/$/, '')}/`;
-}

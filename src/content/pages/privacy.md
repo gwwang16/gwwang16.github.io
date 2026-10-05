@@ -13,4 +13,4 @@ This website uses Google Analytics to understand visits and page usage. Its tags
 
 ## Contact
 
-For privacy questions, email [gwwang@gzu.edu.cn](mailto:gwwang@gzu.edu.cn).
+For privacy questions, use the email address listed on the [homepage](/#contact).

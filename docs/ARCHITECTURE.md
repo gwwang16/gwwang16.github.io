@@ -7,7 +7,7 @@ Astro generates a public academic site with static HTML, TypeScript, schema-vali
 The shared presentation is a compact engineering faculty document. A native font stack, 960px single-column layout, thin section rules, and small portrait replace large promotional headings and cards. Deep blue text accents provide restrained decoration; academic lists and references determine the structure. Accepted visual decisions are documented in `DESIGN.md`.
 
 ```text
-src/data/profile.ts                    → biography, funding, teaching, contact
+src/data/profile.ts                    → appointments, funding, teaching, books, contact
 src/content/selected-publications.json  → verified citation records and authorship
 src/content/research/*.md               → current research and future results
 src/content/projects/*.md               → early-work summary metadata
@@ -25,25 +25,25 @@ public/                                → original media, historical CV, custom
                                  GitHub Pages
 ```
 
-The bibliography uses full author lists in data and compact reference-style rendering. Only papers with a verified first-author or corresponding-author role are admitted. Names are highlighted and verified correspondence is marked with an asterisk. Titles resolve directly through DOI. The same records generate downloadable BibTeX, so citations and export do not drift.
+The bibliography groups books and selected papers separately, using full author lists in data and compact reference-style rendering. Only papers with a verified first-author or corresponding-author role are admitted. Names are highlighted and verified paper correspondence is marked with an asterisk. Paper titles resolve directly through DOI. The same book and paper records generate downloadable BibTeX, so citations and export do not drift.
 
 Each research Markdown document creates a standalone route and homepage summary. Related paper IDs connect the overview to the verified bibliography. This is the extension point for future research results: add meaningful research content without introducing an empty “coming soon” section.
 
 ## Routes
 
-| Route                                          | Behavior                                                                                                                      |
-| ---------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| `/`                                            | Academic profile, research, six representative papers, current projects, background, teaching, early-work collection, contact |
-| `/research/<id>/`                              | Current research overview and related references                                                                              |
-| `/publications/`                               | Selected first-author / corresponding-author papers, newest first                                                             |
-| `/publications.bib`                            | Static BibTeX export of the same records                                                                                      |
-| `/projects/`                                   | Eight concise student-work summaries with original code/demo links                                                            |
-| `/projects/<slug>/`, `/posts/<original-path>/` | Redirect to the corresponding `/projects/#id`                                                                                 |
-| `/publication/<original-slug>/`                | Redirect to the corresponding updated citation                                                                                |
-| `/notes/`                                      | Redirect to the early-work collection                                                                                         |
-| `/terms/`                                      | Current privacy information for hosting, analytics, and contact                                                               |
-| `/sitemap/`, `/sitemap-index.xml`              | Human and crawler indexes                                                                                                     |
-| `/404.html`                                    | Recovery page for GitHub Pages                                                                                                |
+| Route                                          | Behavior                                                                                                              |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `/`                                            | Profile and contact, research, six representative papers, current projects, background, courses, prospective students |
+| `/research/<id>/`                              | Current research overview and related references                                                                      |
+| `/publications/`                               | Books and selected first-author / corresponding-author papers, with papers newest first                               |
+| `/publications.bib`                            | Static BibTeX export of the book and selected paper records                                                           |
+| `/projects/`                                   | Eight concise student-work summaries with original code/demo links                                                    |
+| `/projects/<slug>/`, `/posts/<original-path>/` | Redirect to the corresponding `/projects/#id`                                                                         |
+| `/publication/<original-slug>/`                | Redirect to the corresponding updated citation                                                                        |
+| `/notes/`                                      | Redirect to the early-work collection                                                                                 |
+| `/terms/`                                      | Current privacy information for hosting, analytics, and contact                                                       |
+| `/sitemap/`, `/sitemap-index.xml`              | Human and crawler indexes                                                                                             |
+| `/404.html`                                    | Recovery page for GitHub Pages                                                                                        |
 
 Old about, portfolio, and taxonomy routes remain compatible. GitHub Pages has no arbitrary server redirect rules, so aliases use immediate HTML redirects with a visible fallback link, canonical metadata, and noindex. They are excluded from XML sitemaps. Physical `.html` aliases remain in `public` to avoid unwanted nested route output.
 
@@ -61,12 +61,14 @@ The theme’s sample teaching/talks/pages, Liquid/Ruby toolchain, old jQuery bun
 
 ## Accessibility and delivery
 
-The native mobile menu works without JavaScript. A small script adds Escape, outside-click, and link closing. Static content never depends on client API calls or JavaScript for visibility. Images reserve dimensions; the current portrait is generated as responsive WebP and a compressed social preview.
+The native mobile menu works without JavaScript. A small script adds Escape, outside-click, and link closing. Static content never depends on client API calls or JavaScript for visibility. Images reserve dimensions; the current portrait and early-work thumbnails are generated as responsive WebP. Original public image URLs remain available.
 
-The shared Markdown renderer retains build-time code highlighting, math/MathML, accessible table scrolling, and opt-in animation support for future technical research content. Old Markdown bodies need no destructive rewrite.
+The profile replaces the email's `@` with readable `[at]` text, keeps the domain intact, and displays a short office location. Person metadata omits email, and the privacy page links back to the contact block rather than publishing a full address. This reduces straightforward HTML harvesting while preserving contact information without JavaScript. Earlier projects are linked from the footer, and programme-specific supervision information is linked from the prospective-students section to the university profile.
 
-`npm run validate` runs formatting, Astro/TypeScript diagnostics, the production build, and content/design checks. Real Chromium checks exercise routes, keyboard use, no-JavaScript reading, bibliography export, narrow-screen layout, and automated accessibility. PR builds cannot deploy. Production deployment targets `master` and the `github-pages` environment.
+The shared Markdown renderer retains build-time code highlighting, math/MathML, accessible table scrolling, and opt-in animation support for future technical research content. It includes formula styles and animation scripts only when the rendered HTML contains those features. Old Markdown bodies need no destructive rewrite.
+
+`npm run validate` runs formatting, Astro/TypeScript diagnostics, the production build, and two lightweight content checks: unique paper IDs/DOIs with valid research references, and internal links/assets/anchors. Page copy and content counts are free to change. Presentation changes are checked in the local desktop and phone preview. PR builds cannot deploy. Production deployment targets `master` and the `github-pages` environment.
 
 The current production Pages source is the legacy branch/Jekyll mode. Deployment requires selecting GitHub Actions as the Pages source and merging the reviewed branch. This task does not change Pages settings or DNS. Rollback is a revert plus restoration of the previous Pages source if returning to Jekyll.
 
-Chromium and automated WCAG checks are the tested scope; Safari/Firefox and screen-reader testing remain additional release coverage.
+Browser and accessibility checks are manual review tasks when changing presentation; they are not required for every content publication.

@@ -1,35 +1,17 @@
 ---
-import 'katex/dist/katex.min.css';
+import mathStyles from 'katex/dist/katex.min.css?url';
+import animationScript from '../scripts/animations.js?url&no-inline';
+const content = await Astro.slots.render('default');
 ---
 
-<div class="prose"><slot /></div>
-<script>
-  const motionPreference = window.matchMedia(
-    '(prefers-reduced-motion: reduce)',
-  );
-  for (const figure of document.querySelectorAll<HTMLElement>(
-    '.animation-figure',
-  )) {
-    const image = figure.querySelector<HTMLImageElement>('img[data-animation]');
-    const button = figure.querySelector<HTMLButtonElement>('.animation-toggle');
-    if (!image || !button) continue;
-    button.hidden = false;
-    const stop = () => {
-      image.src = image.dataset.poster ?? image.src;
-      button.setAttribute('aria-pressed', 'false');
-      button.textContent = 'Play animation';
-    };
-    button.addEventListener('click', () => {
-      if (button.getAttribute('aria-pressed') === 'true') stop();
-      else {
-        image.src = image.dataset.animation ?? image.src;
-        button.setAttribute('aria-pressed', 'true');
-        button.textContent = 'Pause animation';
-      }
-    });
-    image.addEventListener('error', stop);
-    motionPreference.addEventListener('change', (event) => {
-      if (event.matches) stop();
-    });
-  }
-</script>
+{
+  content.includes('class="katex') && (
+    <link rel="stylesheet" href={mathStyles} />
+  )
+}
+<div class="prose" set:html={content} />
+{
+  content.includes('class="animation-figure"') && (
+    <script is:inline type="module" src={animationScript} />
+  )
+}

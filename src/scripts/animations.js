@@ -1,0 +1,24 @@
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+for (const figure of document.querySelectorAll('.animation-figure')) {
+  const image = figure.querySelector('img[data-animation]');
+  const button = figure.querySelector('.animation-toggle');
+  if (!image || !button) continue;
+  button.hidden = false;
+  const stop = () => {
+    image.src = image.dataset.poster;
+    button.setAttribute('aria-pressed', 'false');
+    button.textContent = 'Play animation';
+  };
+  button.addEventListener('click', () => {
+    if (button.getAttribute('aria-pressed') === 'true') stop();
+    else {
+      image.src = image.dataset.animation;
+      button.setAttribute('aria-pressed', 'true');
+      button.textContent = 'Pause animation';
+    }
+  });
+  image.addEventListener('error', stop);
+  motionPreference.addEventListener('change', (event) => {
+    if (event.matches) stop();
+  });
+}
