@@ -1,71 +1,34 @@
 # Guangwei Wang · Academic website
 
-Academic website of Guangwei Wang (王广玮), Associate Professor at Guizhou University. Hosted at **https://www.guangwei.wang** from **gwwang16/gwwang16.github.io**.
-
-Built with **Astro 7 and TypeScript**. Research, publications, and profile content are generated as static HTML. Reading and navigation work without a client framework or application server.
-
-The presentation follows a conventional engineering academic homepage: a compact single column, a small portrait, plain research and appointment lists, reference-style publications, and restrained blue headings and links. See [docs/previews](docs/previews) for desktop and phone screenshots.
+Personal academic website of Guangwei Wang (王广玮), Associate Professor at Guizhou University. Built with Astro and TypeScript, hosted at [www.guangwei.wang](https://www.guangwei.wang).
 
 ## Local development
 
-Use Node.js 24 (minimum 22.12) and npm.
+Requires Node.js 22.12 or later and npm.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open `http://localhost:4321`. To inspect a production build:
+Preview at [localhost:4321](http://localhost:4321). Run `npm run validate` before publishing to check formatting, types, the build, and content links.
 
-```sh
-npm run build
-npm run preview
-```
+## Content updates
 
-## Updating academic content
+| Content                                                     | Location                                         |
+| ----------------------------------------------------------- | ------------------------------------------------ |
+| Profile, research projects, teaching, recruitment, and book | `src/data/profile.ts`                            |
+| Papers, author roles, DOIs, and sources                     | `src/content/selected-publications.json`         |
+| Research overviews and related papers                       | `src/content/research/*.md`                      |
+| Earlier project summaries                                   | `src/content/projects/*.md`                      |
+| Images and portrait                                         | `public/images/`, `src/assets/guangwei-wang.jpg` |
 
-- `src/data/profile.ts`: appointments, funded projects, teaching, recruitment, book metadata, public contact, and academic links. `emailDisplay` replaces `@` with readable `[at]` text and keeps the domain intact; keep the plain address out of generated HTML, `mailto` links, and structured metadata.
-- `src/content/selected-publications.json`: selected first-author / corresponding-author papers. Each record includes full authors, final citation metadata, DOI, verified author roles, and source URLs. Never infer correspondence from author order.
-- `src/content/research/*.md`: research overviews and results. Add a Markdown document with `title`, `summary`, related `papers` IDs, and `order`; it gets its own research page and homepage entry.
-- `src/content/projects/*.md`: metadata for concise early-work summaries. Their original bodies remain archived in source; they are not rendered as long tutorials.
-- `src/content/articles/*.md` and `src/content/publications/*.md`: original source archive and legacy URL metadata. Existing links resolve to the relevant early-work summary or updated citation.
-- `src/content/pages/privacy.md`: current privacy information at `/terms/`. The original policy remains archived in `terms.md`.
-- `public/images/`, `public/files/`: preserved public images and the historical CV. The current portrait is `src/assets/guangwei-wang.jpg` and is optimized at build time.
+Set a paper's `featuredOrder` to include it on the homepage. The publication list and BibTeX export are generated from the same records.
 
-For a new paper, verify its role against a publisher author note or the university profile, add complete metadata and sources, and reference its ID from the relevant research overview. Set `featuredOrder` only for representative papers to show on the homepage. New entries automatically join the bibliography and downloadable `/publications.bib`. Books have their own section on `/publications/` and a corresponding BibTeX entry.
-
-The homepage keeps courses and recruitment concise. The university profile is linked from the top contact block. Competition records remain in the profile source and university page rather than the homepage. Earlier projects are accessible from the footer.
-
-English remains the main language, with the Chinese name, project titles, course names, and Chinese-journal citations retained. [docs/SOURCES.md](docs/SOURCES.md) records provenance and citation-year corrections.
-
-[docs/CONTENT-REVIEW.md](docs/CONTENT-REVIEW.md) records the content assessment and priorities for new research material.
-
-Schemas in `src/content.config.ts` validate content. Layout/components live in `src/layouts`, `src/components`, and `src/pages`. Visual tokens are owned by `src/styles/global.css` and documented in [DESIGN.md](DESIGN.md).
-
-## Verification
-
-```sh
-npm run validate
-```
-
-This runs formatting, TypeScript, the static build, and two small content checks: unique paper IDs/DOIs with valid research references, and working internal links/assets/anchors. It does not freeze publication counts, dates, names, or page copy. Check desktop and phone layouts in the local preview when changing presentation or adding images.
-
-If the home directory is unwritable, set `ASTRO_TELEMETRY_DISABLED=1` and use a writable npm cache.
+See [sources](docs/SOURCES.md), [architecture](docs/ARCHITECTURE.md), and [design](DESIGN.md) for details.
 
 ## GitHub Pages deployment
 
-The existing production site uses **Deploy from a branch → master → /** and GitHub’s Jekyll builder. Astro uses the checked-in Actions workflow.
+Select **GitHub Actions** under **Settings → Pages → Build and deployment**. The [Pages workflow](.github/workflows/pages.yml) validates and deploys `dist` on pushes to `master`; pull requests run checks only.
 
-When publishing the reviewed branch:
-
-1. Open **Settings → Pages → Build and deployment** and select **GitHub Actions** as the source.
-2. Merge the reviewed pull request into `master`.
-3. The workflow validates the site and uploads `dist` to Pages. Deployment runs only from `master`; pull requests build and test without deploying.
-
-`public/CNAME` preserves `www.guangwei.wang`. Existing DNS remains applicable. The refactor branch does not change production Pages settings.
-
-## Architecture and migration
-
-[docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) describes rendering, routing, and maintenance. [docs/content-migration.json](docs/content-migration.json) records all 19 original content documents and their body hashes. Their full text remains available in repository history and the source archive, while the website presents condensed student work and verified academic citations.
-
-The original theme was [academicpages](https://academicpages.github.io) / [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), © 2016 Michael Rose, MIT licensed. The original [LICENSE](LICENSE) is retained.
+Original theme: [academicpages](https://academicpages.github.io) / [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/), © 2016 Michael Rose. See [LICENSE](LICENSE).
