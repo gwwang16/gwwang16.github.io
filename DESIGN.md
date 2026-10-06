@@ -67,7 +67,7 @@ The primary readers are research collaborators and prospective postgraduate stud
 
 English is the existing site language. Preserve the Chinese name, original funded-project titles, course names, and Chinese-journal citations with appropriate language attributes. Facts and author roles come from the university and publisher records in `docs/SOURCES.md`. Avoid promotional slogans, publication-count displays, empty future-result placeholders, and commercial landing-page conventions.
 
-Public copy states academic facts directly. Keep appointments in the timeline and funding in its own section. Research overviews describe problems and methods supported by their citations. Omit editing/migration narratives, instructions explaining ordinary links, repeated profile facts, and redundant technology tags. Authorship and citation-year verification notes belong in source records. The privacy page describes the services used by the current site.
+Public copy states academic facts directly. Keep appointments in the timeline and funding in its own section. Research overviews describe problems and methods supported by their citations. Research detail pages use short keyword lists under each category; selected papers provide the technical detail. Omit editing/migration narratives, instructions explaining ordinary links, repeated profile facts, and redundant technology tags. Authorship and citation-year verification notes belong in source records. The privacy page describes the services used by the current site.
 
 Token ownership uses Model B: `src/styles/global.css` is the canonical runtime source. This document mirrors accepted values; update both when changing a token. Shared layouts and citation components keep every public page consistent.
 

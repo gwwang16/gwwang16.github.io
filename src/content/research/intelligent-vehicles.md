@@ -15,8 +15,12 @@ order: 1
 
 ## Motion planning and perception
 
-Our work includes terrain-aware off-road planning with Multi-terrain RRT*, parking trajectory planning with joint spatial and temporal search, and real-time LiDAR semantic segmentation.
+- Terrain-aware off-road planning
+- Spatiotemporal parking planning
+- Real-time LiDAR semantic segmentation
 
 ## Vehicle control and energy management
 
-We study adaptive deep reinforcement learning for autonomous driving on mountain roads, terrain-aware energy management for fuel-cell hybrid buses, and altitude-adaptive fuel-cell air-supply control and net-power optimization.
+- Deep reinforcement learning for mountain-road driving
+- Fuel-cell hybrid bus energy management
+- Altitude-adaptive fuel-cell optimization

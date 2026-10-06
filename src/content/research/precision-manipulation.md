@@ -15,8 +15,12 @@ order: 2
 
 ## Micro/nano motion control
 
-We develop sliding-mode and observer-based control for piezoelectric positioning stages, including active disturbance rejection, fixed-time convergence, and prescribed-time tracking. Earlier work addresses precision position/force control and force feedback in cell microinjection.
+- Piezoelectric nanopositioning
+- Sliding-mode control and disturbance rejection
+- Fixed-time and prescribed-time control
+- Microinjection position/force control
 
 ## Compliant constant-force mechanisms
 
-We study automatic optimization of compliant constant-force mechanisms and the design and evaluation of adjustable constant-force microgrippers.
+- Constant-force mechanism optimization
+- Adjustable constant-force microgrippers
