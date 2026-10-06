@@ -36,6 +36,7 @@ export async function earlyWork() {
     title: data.title,
     description: data.description,
     image: data.image,
+    imageAlt: data.imageAlt,
     repository: data.repository,
     demo:
       data.slug === 'search-and-sample-return'
@@ -44,10 +45,12 @@ export async function earlyWork() {
   }));
   projects.push({
     id: 'home-service-robot',
-    title: 'Home service robot',
+    title: 'ROS service robot navigation',
     description:
-      'A ROS simulation combining SLAM, localization, and navigation to pick up and deliver objects.',
-    image: '/images/portfolio/home-service-robot.png',
+      'SLAM, localization, and waypoint navigation in a simulated indoor environment.',
+    image: '/images/portfolio/home-service-robot/results.jpg',
+    imageAlt:
+      'ROS mapping and navigation display beside the simulated indoor environment.',
     repository: 'https://github.com/gwwang16/Home-Service-Robot',
     demo: undefined,
   });

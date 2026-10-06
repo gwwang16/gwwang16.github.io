@@ -70,6 +70,7 @@ const projects = defineCollection({
     slug: z.string(),
     category: z.enum(['Vehicles', 'Robotics']),
     image: z.string(),
+    imageAlt: z.string().optional(),
     animation: z.string().optional(),
     technologies: z.array(z.string()),
     repository: z.url().optional(),

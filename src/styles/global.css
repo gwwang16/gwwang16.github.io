@@ -571,7 +571,7 @@ address {
 .early-work-item > img {
   width: 112px;
   height: 74px;
-  object-fit: cover;
+  object-fit: contain;
   background: var(--color-paper);
 }
 .early-work-item h2 {

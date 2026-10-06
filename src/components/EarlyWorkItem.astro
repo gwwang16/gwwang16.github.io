@@ -22,12 +22,12 @@ const image = {
 <article class="early-work-item" id={project.id}>
   <Image
     src={image}
-    alt={`Preview of ${project.title}`}
+    alt={project.imageAlt ?? project.title}
     width={112}
     height={74}
     widths={[112, 224]}
     sizes="(max-width: 600px) 80px, 112px"
-    fit="cover"
+    fit="contain"
     format="webp"
     loading="lazy"
     decoding="async"

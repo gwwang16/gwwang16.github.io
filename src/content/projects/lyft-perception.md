@@ -1,11 +1,12 @@
 ---
-title: Semantic segmentation (Lyft challenge)
+title: Road-scene semantic segmentation
 collection: portfolio
 slug: lyft-perception
 category: Vehicles
-image: /images/portfolio/semantic-segmentation/semantic-segmentation.png
-description: Pixel-wise recognition of vehicles and drivable road surfaces in simulated
-  camera images.
+image: /images/portfolio/semantic-segmentation/output-poster.png
+imageAlt: Road-scene segmentation output with green vehicle masks and a red road mask.
+description: Segmentation of vehicles and drivable areas in CARLA images for the
+  Udacity–Lyft challenge.
 technologies:
 - Deep learning
 - Semantic segmentation

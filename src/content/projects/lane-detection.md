@@ -1,11 +1,12 @@
 ---
-title: Lane detection
+title: Lane-boundary detection
 collection: portfolio
 slug: lane-detection
 category: Vehicles
-image: /images/portfolio/lane.png
-description: Camera calibration, perspective transforms, and lane-boundary estimation
-  for road perception.
+image: /images/portfolio/lane-detection/video_screenshot.png
+imageAlt: Detected lane boundaries and lane area overlaid on a road image.
+description: Lane-boundary estimation using camera calibration, perspective transforms,
+  and polynomial fitting.
 technologies:
 - Computer vision
 - Python

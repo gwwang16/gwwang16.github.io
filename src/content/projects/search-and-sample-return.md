@@ -4,7 +4,8 @@ collection: portfolio
 slug: search-and-sample-return
 category: Robotics
 image: /images/portfolio/search-return/final_results.png
-description: Autonomous mapping and sample search in a rover simulation.
+imageAlt: Rover simulator showing collected samples and the terrain map.
+description: Terrain mapping and autonomous sample search in a Unity rover simulation.
 technologies:
 - Perception
 - Mapping

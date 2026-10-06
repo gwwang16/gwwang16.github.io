@@ -1,11 +1,12 @@
 ---
-title: 3D object perception
+title: Point-cloud object recognition
 collection: portfolio
 slug: 3d-perception
 category: Robotics
-image: /images/portfolio/pr2-perception/pick_list_3_result.jpg
-description: Point-cloud segmentation and object classification for PR2 pick-and-place
-  tasks.
+image: /images/portfolio/pr2-perception/collision_map.png
+imageAlt: PR2 simulation with segmented tabletop point clouds and a collision map.
+description: Point-cloud segmentation and SVM-based object recognition for simulated
+  PR2 pick-and-place tasks.
 technologies:
 - Point clouds
 - PCL

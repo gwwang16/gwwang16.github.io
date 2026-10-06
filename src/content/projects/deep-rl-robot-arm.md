@@ -1,12 +1,13 @@
 ---
-title: Robot arm reinforcement learning
+title: Robot arm target reaching
 collection: portfolio
 slug: deep-rl-robot-arm
 category: Robotics
-image: /images/portfolio/deep-rl-arm.png
+image: /images/portfolio/deep-rl-arm-poster.png
+imageAlt: Gazebo robot-arm simulation with target-contact training feedback.
 animation: /images/portfolio/deep-rl-arm.gif
-description: Deep reinforcement learning for robotic manipulation on an NVIDIA Jetson
-  TX2.
+description: DQN-based control for reaching and contacting targets with a simulated
+  robot arm.
 technologies:
 - PyTorch
 - OpenAI Gym

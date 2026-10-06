@@ -3,9 +3,10 @@ title: KUKA iiwa inverse kinematics
 collection: portfolio
 slug: iiwa-kinematics
 category: Robotics
-image: /images/portfolio/pick-place/pick-place.png
-description: Inverse kinematics for the seven-axis KUKA LBR IIWA R820, from end-effector
-  poses to joint angles.
+image: /images/portfolio/pick-place/imgs/IK_results.jpg
+imageAlt: KUKA iiwa arm reaching a target in a Gazebo simulation.
+description: Analytical inverse kinematics with a fixed third joint, demonstrated
+  on a KUKA iiwa arm in Gazebo.
 technologies:
 - ROS
 - Kinematics

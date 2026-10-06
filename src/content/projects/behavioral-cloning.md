@@ -1,10 +1,11 @@
 ---
-title: Steering by behavioral cloning
+title: Behavioral cloning for steering control
 collection: portfolio
 slug: behavioral-cloning
 category: Vehicles
-image: /images/portfolio/behavior-clone/clone.png
-description: Learning steering commands from camera images with a convolutional neural
+image: /images/portfolio/behavior-clone/t1_img.png
+imageAlt: Driving simulator view of a car on a winding track.
+description: Steering prediction from simulator images using a convolutional neural
   network.
 technologies:
 - Keras
