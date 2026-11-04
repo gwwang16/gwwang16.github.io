@@ -1,0 +1,74 @@
+# Architecture
+
+## Rendering and ownership
+
+Astro generates a public academic site with static HTML, TypeScript, schema-validated content, and small progressive enhancements. A server application or client SPA is unnecessary for the research profile and bibliography. Individual interactive research demonstrations can be added later without changing this model.
+
+The shared presentation is a compact engineering faculty document. A native font stack, 960px single-column layout, thin section rules, and small portrait replace large promotional headings and cards. Deep blue text accents provide restrained decoration; academic lists and references determine the structure. Accepted visual decisions are documented in `DESIGN.md`.
+
+```text
+src/data/profile.ts                    → appointments, funding, teaching, books, contact
+src/content/selected-publications.json  → verified citation records and authorship
+src/content/research/*.md               → current research and future results
+src/content/projects/*.md               → early-work summary metadata
+src/content/articles/*.md               → preserved historical source
+src/content/publications/*.md           → preserved historical source / legacy URLs
+src/lib/                               → ordering, bibliography export, old URL mapping
+src/components/                        → citations, research, timeline, shared navigation
+src/layouts/BaseLayout                 → SEO, person metadata, header, footer
+src/pages/                             → static routes and compatibility redirects
+src/assets/guangwei-wang.jpg            → current portrait, build-time optimization
+public/                                → original media, historical CV, custom domain
+                                       ↓
+                                     dist/
+                                       ↓
+                                 GitHub Pages
+```
+
+The bibliography groups books and selected papers separately, using full author lists in data and compact reference-style rendering. Only papers with a verified first-author or corresponding-author role are admitted. Names are highlighted and verified paper correspondence is marked with an asterisk. Paper titles resolve directly through DOI. The same book and paper records generate downloadable BibTeX, so citations and export do not drift.
+
+Each research Markdown document creates a standalone route and homepage summary. Related paper IDs connect the overview to the verified bibliography. This is the extension point for future research results: add meaningful research content without introducing an empty “coming soon” section.
+
+## Routes
+
+| Route                                          | Behavior                                                                                                              |
+| ---------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `/`                                            | Profile and contact, research, six representative papers, current projects, background, courses, prospective students |
+| `/research/<id>/`                              | Current research overview and related references                                                                      |
+| `/publications/`                               | Books and selected first-author / corresponding-author papers, with papers newest first                               |
+| `/publications.bib`                            | Static BibTeX export of the book and selected paper records                                                           |
+| `/projects/`                                   | Eight concise student-work summaries with original code/demo links                                                    |
+| `/projects/<slug>/`, `/posts/<original-path>/` | Redirect to the corresponding `/projects/#id`                                                                         |
+| `/publication/<original-slug>/`                | Redirect to the corresponding updated citation                                                                        |
+| `/notes/`                                      | Redirect to the early-work collection                                                                                 |
+| `/terms/`                                      | Current privacy information for hosting, analytics, and contact                                                       |
+| `/sitemap/`, `/sitemap-index.xml`              | Human and crawler indexes                                                                                             |
+| `/404.html`                                    | Recovery page for GitHub Pages                                                                                        |
+
+Old about, portfolio, and taxonomy routes remain compatible. GitHub Pages has no arbitrary server redirect rules, so aliases use immediate HTML redirects with a visible fallback link, canonical metadata, and noindex. They are excluded from XML sitemaps. Physical `.html` aliases remain in `public` to avoid unwanted nested route output.
+
+## Content and evidence
+
+The immutable migration manifest covers nineteen original bodies: six articles, seven projects, five publications, and privacy. These remain in source. The user requested condensed student work, so original tutorials are not rendered on the public site. The home-service robot article contributes the eighth early-work item. Two historical publication drafts remain private; they are not silently assumed published.
+
+`src/content/pages/privacy.md` supplies the current `/terms/` page. Its text describes the existing GitHub Pages hosting and Analytics integration. The original privacy policy stays in the archive and is not rendered.
+
+Current profile facts, funding, courses, mentoring, portrait, public email, and university URL come from the faculty profile updated in April 2026. Recent publications were discovered through the correct Guizhou University ResearchGate profile and checked against publishers / Crossref. Google Scholar’s existing link is retained, but its direct page returned HTTP 429 during verification. See [SOURCES.md](SOURCES.md) and each paper’s source fields.
+
+Issue metadata takes precedence over initial online dates. For example, the adjustable microgripper is cited as Micromachines 2024 despite its December 2023 online release, and the robust nanopositioning paper is cited as Journal of Vibration and Control 2023 despite appearing online in 2022.
+
+The theme’s sample teaching/talks/pages, Liquid/Ruby toolchain, old jQuery bundle, and committed Sass caches are retired. Real original image/CV paths, analytics ID, domain, and MIT license are preserved. The old CV is kept as a historical asset, not advertised as a current profile document.
+
+## Accessibility and delivery
+
+The shared navigation exposes Home, Research, Publications, and Join us directly on desktop and phones, without a collapsed menu or navigation script. Responsive spacing and type keep the links on one row at normal phone text sizes; wrapping accommodates enlarged text. Static content never depends on client API calls or JavaScript for visibility. Images reserve dimensions; the current portrait and early-work thumbnails are generated as responsive WebP. Original public image URLs remain available.
+
+The profile replaces the email's `@` with readable `[at]` text, keeps the domain intact, and displays a short office location. Person metadata omits email, and the privacy page links back to the contact block rather than publishing a full address. This reduces straightforward HTML harvesting while preserving contact information without JavaScript. Earlier projects are linked from the footer, and programme-specific supervision information is linked from the prospective-students section to the university profile.
+
+The shared Markdown renderer retains build-time code highlighting, math/MathML, accessible table scrolling, and opt-in animation support for future technical research content. It includes formula styles and animation scripts only when the rendered HTML contains those features. Old Markdown bodies need no destructive rewrite.
+
+`npm run validate` runs formatting, Astro/TypeScript diagnostics, the production build, and two lightweight content checks: unique paper IDs/DOIs with valid research references, and internal links/assets/anchors. Page copy and content counts are free to change. Presentation changes are checked in the local desktop and phone preview. PR builds cannot deploy. Production deployment targets `master` and the `github-pages` environment.
+
+Production uses GitHub Actions as the Pages source. The workflow publishes the validated static build from `master` to the existing `www.guangwei.wang` domain with HTTPS enforced. Rollback between Astro releases is a revert and redeployment; returning to the previous Jekyll site also requires restoring the legacy branch publishing source.
+
+Browser and accessibility checks are manual review tasks when changing presentation; they are not required for every content publication.

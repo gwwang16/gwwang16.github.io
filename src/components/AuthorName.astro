@@ -1,0 +1,23 @@
+---
+interface Props {
+  author: string;
+  corresponding: boolean;
+  last: boolean;
+}
+const { author, corresponding, last } = Astro.props;
+const self = author === 'Guangwei Wang' || author === '王广玮';
+const parts = author.split(' ');
+const label =
+  parts.length > 1
+    ? `${parts.at(-1)} ${parts
+        .slice(0, -1)
+        .map((part) => part[0])
+        .join('')}`
+    : author;
+---
+
+<span class:list={['citation-author', { 'self-author': self }]}
+  >{label}{
+    self && corresponding && <sup aria-label="corresponding author">*</sup>
+  }</span
+>{last ? '. ' : ', '}

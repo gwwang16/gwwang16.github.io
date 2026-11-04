@@ -1,0 +1,18 @@
+---
+interface Props {
+  period: string;
+  title: string;
+  funder: string;
+  originalTitle: string;
+}
+const { period, title, funder, originalTitle } = Astro.props;
+---
+
+<li class="grant-item">
+  <p class="grant-period">{period}</p>
+  <div>
+    <h3>{title}</h3>
+    <p class="grant-funder">{funder}</p>
+    <p class="grant-original" lang="zh-CN">{originalTitle}</p>
+  </div>
+</li>

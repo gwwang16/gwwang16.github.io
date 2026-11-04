@@ -1,0 +1,17 @@
+---
+import mathStyles from 'katex/dist/katex.min.css?url';
+import animationScript from '../scripts/animations.js?url&no-inline';
+const content = await Astro.slots.render('default');
+---
+
+{
+  content.includes('class="katex') && (
+    <link rel="stylesheet" href={mathStyles} />
+  )
+}
+<div class="prose" set:html={content} />
+{
+  content.includes('class="animation-figure"') && (
+    <script is:inline type="module" src={animationScript} />
+  )
+}

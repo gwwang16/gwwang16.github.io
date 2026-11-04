@@ -1,0 +1,12 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props {
+  area: CollectionEntry<'research'>;
+}
+const { area } = Astro.props;
+---
+
+<li class="research-item">
+  <h3><a href={`/research/${area.id}/`}>{area.data.title}</a></h3>
+  <p>{area.data.summary}</p>
+</li>

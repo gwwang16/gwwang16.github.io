@@ -1,0 +1,18 @@
+---
+import { Image } from 'astro:assets';
+import portrait from '../assets/guangwei-wang.jpg';
+---
+
+<figure class="profile-visual">
+  <Image
+    src={portrait}
+    alt="Guangwei Wang"
+    width={120}
+    height={175}
+    widths={[120, 240]}
+    sizes="(max-width: 380px) 80px, (max-width: 600px) 100px, 120px"
+    format="webp"
+    loading="eager"
+    fetchpriority="high"
+  />
+</figure>

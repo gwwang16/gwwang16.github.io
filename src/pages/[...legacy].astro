@@ -1,0 +1,24 @@
+---
+import { allProjects } from '../lib/content';
+import MovedPage from '../components/MovedPage.astro';
+export async function getStaticPaths() {
+  const aliases = [
+    ['/about/', '/'],
+    ['/blog/', '/'],
+    ['/portfolio/', '/projects/'],
+    ['/categories/', '/projects/'],
+    ['/tags/', '/projects/'],
+    ['/page-archive/', '/sitemap/'],
+    ['/collection-archive/', '/sitemap/'],
+  ];
+  for (const { data } of await allProjects())
+    aliases.push([data.legacyPath, `/projects/#${data.slug}`]);
+  return aliases.map(([from, to]) => ({
+    params: { legacy: from.replace(/^\//, '').replace(/\/$/, '') },
+    props: { destination: to },
+  }));
+}
+const { destination } = Astro.props;
+---
+
+<MovedPage destination={destination} />

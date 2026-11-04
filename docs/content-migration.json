@@ -1,0 +1,138 @@
+{
+  "sourceCommit": "5bf327d",
+  "entries": [
+    {
+      "source": "_posts/2017-09-01-pr2-perception.md",
+      "destination": "src/content/articles/2017-09-01-pr2-perception.md",
+      "bodySha256": "4b22bf2733f5502eddfdcf52ae12e9c959486b0e9ec9bc46e72d3f4f44996071",
+      "route": "/posts/pr2-3d-perception/",
+      "draft": false
+    },
+    {
+      "source": "_posts/2017-12-19-behavioral-clone.md",
+      "destination": "src/content/articles/2017-12-19-behavioral-clone.md",
+      "bodySha256": "02c7dd3204b6db68b2f6e90b7f4a948f34ae2cee8a877bb2b5e595436f8846dd",
+      "route": "/posts/2017/behavioral-cloning/",
+      "draft": false
+    },
+    {
+      "source": "_posts/2018-01-30-lane-detection.md",
+      "destination": "src/content/articles/2018-01-30-lane-detection.md",
+      "bodySha256": "9ebdc36d222cc94910a6849eaaacfc6e3599d4b65f6ee108b69eb95604a32af5",
+      "route": "/posts/2018/lane-detection/",
+      "draft": false
+    },
+    {
+      "source": "_posts/2018-03-01-iiwa-kinematics.md",
+      "destination": "src/content/articles/2018-03-01-iiwa-kinematics.md",
+      "bodySha256": "d7d009d968c1eb272453b3c8e7b71647b8d056c0150fd05405bd826daaf4e180",
+      "route": "/posts/2018/iiwa-kinematics/",
+      "draft": false
+    },
+    {
+      "source": "_posts/2018-05-09-slam.md",
+      "destination": "src/content/articles/2018-05-09-slam.md",
+      "bodySha256": "268791f930e0424cf00041f77f805907cb491078c2f01a1d9234cd4f9f9079e2",
+      "route": "/posts/2018/home-service-robot/",
+      "draft": false
+    },
+    {
+      "source": "_posts/2018-06-04-lyft-challenge.md",
+      "destination": "src/content/articles/2018-06-04-lyft-challenge.md",
+      "bodySha256": "065931aeb82b7f7f735a46e9de8529277fb90c7dbac46a614f52cae87a22808a",
+      "route": "/posts/2018/lyft-challenge/",
+      "draft": false
+    },
+    {
+      "source": "_publications/2017-04-26-tmech.md",
+      "destination": "src/content/publications/2017-04-26-tmech.md",
+      "bodySha256": "fd140e05d27b726ff2ba06285e0cd6546112c8da9bcedb8a663d08b67d5ae1f3",
+      "route": "/publication/2017-04-26-tmech/",
+      "draft": false
+    },
+    {
+      "source": "_publications/2017-08-14-advanced-robotics.md",
+      "destination": "src/content/publications/2017-08-14-advanced-robotics.md",
+      "bodySha256": "a55fc5bc45309bd30594a224c73bc5cfe79019291c9a0c1e7bc7c654e2adf494",
+      "route": "/publication/2017-08-14-advanced-robotics/",
+      "draft": false
+    },
+    {
+      "source": "_publications/2017-08-25-asjc.md",
+      "destination": "src/content/publications/2017-08-25-asjc.md",
+      "bodySha256": "06aa1c3a5bca0a75c6fb8c4e0aad6b686430b1999de21ebece0a8d19b57ea7ee",
+      "route": "/publication/2017-08-25-asjc/",
+      "draft": false
+    },
+    {
+      "source": "_publications/2018-03-25-adrc.md",
+      "destination": "src/content/publications/2018-03-25-adrc.md",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "route": "/publication/2018-03-25-adrc/",
+      "draft": true
+    },
+    {
+      "source": "_publications/2018-05-20-ccfm.md",
+      "destination": "src/content/publications/2018-05-20-ccfm.md",
+      "bodySha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "route": "/publication/2018-05-20-ccfm/",
+      "draft": true
+    },
+    {
+      "source": "_portfolio/1-lyft challenge.md",
+      "destination": "src/content/projects/lyft-perception.md",
+      "bodySha256": "3d43b7904eb9b9e112efa16ab5a1b3d5e3a34054cc97b13d760bae56e15ed8a7",
+      "route": "/projects/lyft-perception/",
+      "draft": false
+    },
+    {
+      "source": "_portfolio/2-lane_line.md",
+      "destination": "src/content/projects/lane-detection.md",
+      "bodySha256": "962b22c33999604edab2878931edd11d1fa812456c330e7af8263e312008d868",
+      "route": "/projects/lane-detection/",
+      "draft": false
+    },
+    {
+      "source": "_portfolio/3-pick and place.md",
+      "destination": "src/content/projects/iiwa-kinematics.md",
+      "bodySha256": "d708db34c35336af961f67860ee4b14269964018f40631ad3cffb1a6b2d03956",
+      "route": "/projects/iiwa-kinematics/",
+      "draft": false
+    },
+    {
+      "source": "_portfolio/4-behavior-clone.md",
+      "destination": "src/content/projects/behavioral-cloning.md",
+      "bodySha256": "f6f3d7c8498adcd5438af1588288ef5946c32b29e7dd72cc79667e0912b6ae41",
+      "route": "/projects/behavioral-cloning/",
+      "draft": false
+    },
+    {
+      "source": "_portfolio/5-deep-rl-arm.md",
+      "destination": "src/content/projects/deep-rl-robot-arm.md",
+      "bodySha256": "ed042665e57165fdaaebff21a3802d6d5311068b3c309e481ce20a6f7be6377f",
+      "route": "/projects/deep-rl-robot-arm/",
+      "draft": false
+    },
+    {
+      "source": "_portfolio/6-perception.md",
+      "destination": "src/content/projects/3d-perception.md",
+      "bodySha256": "79a939a0aff31b0ef779f921d3ee4df077a39729be7abc0b586bbb030ec855e4",
+      "route": "/projects/3d-perception/",
+      "draft": false
+    },
+    {
+      "source": "_portfolio/7-search and return.md",
+      "destination": "src/content/projects/search-and-sample-return.md",
+      "bodySha256": "31ef19a99fed9af270e794f7f20636c9d54810b2dccaca8850f7daefe4d6d8ca",
+      "route": "/projects/search-and-sample-return/",
+      "draft": false
+    },
+    {
+      "source": "_pages/terms.md",
+      "destination": "src/content/pages/terms.md",
+      "bodySha256": "d9de520542fd5914e95de1c4cf059d7f9c87c99d523466aed4cc5d01f243021d",
+      "route": "/terms/",
+      "draft": false
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PublicationList from '../../components/PublicationList.astro';
+import { selectedPapers } from '../../lib/content';
+import { profile } from '../../data/profile';
+const papers = await selectedPapers();
+---
+
+<BaseLayout
+  title="Publications"
+  description="Books and selected papers by Guangwei Wang on intelligent vehicles, precision control, and compliant mechanisms."
+>
+  <div class="container archive-page publication-page">
+    <header class="page-heading">
+      <h1>Publications</h1>
+      <div class="publication-actions">
+        <a href={profile.links.scholar}>Google Scholar</a>
+        <a href={profile.links.researchgate}>ResearchGate</a>
+        <a href="/publications.bib" download>Download BibTeX</a>
+      </div>
+    </header>
+    <section class="section" aria-labelledby="papers-heading">
+      <h2 id="papers-heading">Selected papers</h2>
+      <PublicationList papers={papers} />
+    </section>
+    <section class="section" aria-labelledby="books-heading">
+      <h2 id="books-heading">Books</h2>
+      <ol class="publication-list">
+        <li class="book-item" id={profile.book.id}>
+          <p class="citation">
+            <span lang="zh-CN">
+              {
+                profile.book.authors.map((author, index) => (
+                  <>
+                    {index > 0 && '、'}
+                    {author === profile.chineseName ? (
+                      <strong class="self-author">{author}</strong>
+                    ) : (
+                      author
+                    )}
+                  </>
+                ))
+              }
+              {'. '}<em>{profile.book.title}</em>{
+                `. ${profile.book.publisher}, ${profile.book.year}.`
+              }
+            </span>
+          </p>
+        </li>
+      </ol>
+    </section>
+  </div>
+</BaseLayout>

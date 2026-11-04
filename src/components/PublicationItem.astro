@@ -1,0 +1,39 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import AuthorName from './AuthorName.astro';
+interface Props {
+  paper: CollectionEntry<'papers'>;
+}
+const { paper } = Astro.props;
+const { data } = paper;
+---
+
+<li class="publication-item" id={paper.id} data-roles={data.roles.join(' ')}>
+  <p class="citation" lang={data.language}>
+    {
+      data.authors.map((author, index) => (
+        <AuthorName
+          author={author}
+          corresponding={data.roles.includes('corresponding')}
+          last={index === data.authors.length - 1}
+        />
+      ))
+    }
+    <a class="citation-title" href={`https://doi.org/${data.doi}`}
+      >{data.title}</a
+    >{'. '}
+    <em>{data.journal}</em>, {data.year}{
+      data.volume && (
+        <span>
+          , {data.volume}
+          {data.issue && <span>({data.issue})</span>}
+          {data.pages && <span>: {data.pages.replaceAll('-', '–')}</span>}
+        </span>
+      )
+    }.{
+      data.online && (
+        <span class="citation-online">{' Advance online publication.'}</span>
+      )
+    }
+  </p>
+</li>

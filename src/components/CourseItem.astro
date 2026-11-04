@@ -1,0 +1,13 @@
+---
+interface Props {
+  level: string;
+  title: string;
+  chineseTitle: string;
+}
+const { level, title, chineseTitle } = Astro.props;
+---
+
+<li>
+  {title}{' '}(<span lang="zh-CN">{chineseTitle}</span>)
+  <span class="course-level"> — {level}</span>
+</li>

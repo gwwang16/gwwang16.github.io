@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+public/
+src/content/articles/
+src/content/projects/
+src/content/publications/
+src/content/pages/
+test-results/
+package-lock.json
+docs/content-migration.json

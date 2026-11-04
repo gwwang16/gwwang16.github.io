@@ -1,0 +1,19 @@
+---
+interface Props {
+  period: string;
+  role: string;
+  institution: string;
+  department: string;
+}
+const { period, role, institution, department } = Astro.props;
+---
+
+<li>
+  <p class="experience-period">{period}</p>
+  <div>
+    <h3>{role}</h3>
+    <p class="experience-institution">
+      {institution}{department && ` · ${department}`}
+    </p>
+  </div>
+</li>

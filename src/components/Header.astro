@@ -1,0 +1,30 @@
+---
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'Research', href: '/#research' },
+  { label: 'Publications', href: '/publications/' },
+  { label: 'Join us', href: '/#prospective-students' },
+];
+const isCurrent = (href: string) =>
+  href === '/'
+    ? Astro.url.pathname === '/'
+    : href === '/#research'
+      ? Astro.url.pathname.startsWith('/research/')
+      : !href.includes('#') && Astro.url.pathname.startsWith(href);
+---
+
+<header class="site-header">
+  <nav class="container header-inner" aria-label="Main navigation">
+    {
+      links.map(({ label, href }) => (
+        <a
+          class:list={{ 'home-link': href === '/' }}
+          href={href}
+          aria-current={isCurrent(href) ? 'page' : undefined}
+        >
+          {label}
+        </a>
+      ))
+    }
+  </nav>
+</header>

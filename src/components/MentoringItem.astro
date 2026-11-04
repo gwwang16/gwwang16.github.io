@@ -1,0 +1,12 @@
+---
+interface Props {
+  year: string;
+  result: string;
+  event: string;
+}
+const { year, result, event } = Astro.props;
+---
+
+<li>
+  {year}: <strong>{result}</strong>, {event}.
+</li>
