@@ -188,8 +188,8 @@ strong {
 }
 .header-inner {
   --navigation-duration: 180ms;
-  display: grid;
-  grid-template-columns: auto 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 24px;
   align-items: center;
   min-height: 64px;
@@ -235,17 +235,9 @@ strong {
   transform: scaleX(1);
 }
 .home-link {
+  margin-right: auto;
   font-weight: 600;
   letter-spacing: 0.02em;
-}
-.desktop-navigation {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-end;
-  gap: 0 24px;
-}
-.mobile-navigation {
-  display: none;
 }
 .profile-header {
   display: grid;
@@ -598,86 +590,19 @@ address {
 
 @media (max-width: 800px) {
   .header-inner {
-    gap: 16px;
-    align-items: start;
+    gap: 0 16px;
     min-height: 52px;
   }
   .header-inner a {
     min-height: 52px;
   }
-  .desktop-navigation {
-    display: none;
-  }
-  .mobile-navigation {
-    display: block;
-    text-align: right;
-  }
-  .mobile-navigation summary {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    min-height: 52px;
-    color: var(--color-muted);
-    list-style: none;
-    transition: color var(--navigation-duration) ease;
-  }
-  .mobile-navigation summary::-webkit-details-marker {
-    display: none;
-  }
-  .mobile-navigation summary:hover,
-  .mobile-navigation summary:focus-visible,
-  .mobile-navigation[open] summary {
-    color: var(--color-primary-hover);
-  }
-  .mobile-navigation summary:active {
-    color: var(--color-primary-hover);
-  }
-  .menu-indicator {
-    position: relative;
-    width: 16px;
-    height: 16px;
-  }
-  .menu-indicator::before,
-  .menu-indicator::after {
-    position: absolute;
-    top: 7px;
-    left: 0;
-    width: 16px;
-    height: 1px;
-    border-top: 1px solid currentColor;
-    content: '';
-    transform: translateY(-3px);
-    transition: transform var(--navigation-duration) ease;
-  }
-  .menu-indicator::after {
-    transform: translateY(3px);
-  }
-  .mobile-navigation[open] .menu-indicator::before {
-    transform: rotate(45deg);
-  }
-  .mobile-navigation[open] .menu-indicator::after {
-    transform: rotate(-45deg);
-  }
-  .mobile-navigation nav {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 4px 14px;
-    padding-block: 8px 12px;
-    border-top: 1px solid var(--color-border);
-    text-align: left;
-  }
-  .mobile-navigation nav a {
-    display: flex;
-    align-items: center;
-    min-height: 44px;
-  }
-  .mobile-navigation nav a::after {
-    bottom: 4px;
-    width: 20px;
-  }
 }
 
 @media (max-width: 600px) {
+  .header-inner {
+    column-gap: 12px;
+    font-size: 14px;
+  }
   .container {
     width: calc(100% - 32px);
   }

@@ -1,65 +1,30 @@
 ---
 const links = [
+  { label: 'Home', href: '/' },
   { label: 'Research', href: '/#research' },
   { label: 'Publications', href: '/publications/' },
-  { label: 'Background', href: '/#background' },
-  { label: 'Teaching', href: '/#teaching' },
   { label: 'Join us', href: '/#prospective-students' },
-  { label: 'Contact', href: '/#contact' },
 ];
 const isCurrent = (href: string) =>
-  href === '/#research'
-    ? Astro.url.pathname.startsWith('/research/')
-    : !href.includes('#') && Astro.url.pathname.startsWith(href);
+  href === '/'
+    ? Astro.url.pathname === '/'
+    : href === '/#research'
+      ? Astro.url.pathname.startsWith('/research/')
+      : !href.includes('#') && Astro.url.pathname.startsWith(href);
 ---
 
 <header class="site-header">
-  <div class="container header-inner">
-    <a
-      class="home-link"
-      href="/"
-      aria-label="Guangwei Wang, home"
-      aria-current={Astro.url.pathname === '/' ? 'page' : undefined}>Home</a
-    >
-    <nav class="desktop-navigation" aria-label="Main navigation">
-      {
-        links.map(({ label, href }) => (
-          <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
-            {label}
-          </a>
-        ))
-      }
-    </nav>
-    <details class="mobile-navigation">
-      <summary
-        >Menu<span class="menu-indicator" aria-hidden="true"></span></summary
-      >
-      <nav aria-label="Mobile navigation">
-        {
-          links.map(({ label, href }) => (
-            <a href={href} aria-current={isCurrent(href) ? 'page' : undefined}>
-              {label}
-            </a>
-          ))
-        }
-      </nav>
-    </details>
-  </div>
-</header>
-<script>
-  const navigation =
-    document.querySelector<HTMLDetailsElement>('.mobile-navigation');
-  navigation?.addEventListener('click', (event) => {
-    if ((event.target as Element).closest('a')) navigation.open = false;
-  });
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && navigation?.open) {
-      navigation.open = false;
-      navigation.querySelector('summary')?.focus();
+  <nav class="container header-inner" aria-label="Main navigation">
+    {
+      links.map(({ label, href }) => (
+        <a
+          class:list={{ 'home-link': href === '/' }}
+          href={href}
+          aria-current={isCurrent(href) ? 'page' : undefined}
+        >
+          {label}
+        </a>
+      ))
     }
-  });
-  document.addEventListener('click', (event) => {
-    if (navigation?.open && !navigation.contains(event.target as Node))
-      navigation.open = false;
-  });
-</script>
+  </nav>
+</header>

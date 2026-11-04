@@ -61,7 +61,7 @@ The theme’s sample teaching/talks/pages, Liquid/Ruby toolchain, old jQuery bun
 
 ## Accessibility and delivery
 
-The native mobile menu works without JavaScript. A small script adds Escape, outside-click, and link closing. Static content never depends on client API calls or JavaScript for visibility. Images reserve dimensions; the current portrait and early-work thumbnails are generated as responsive WebP. Original public image URLs remain available.
+The shared navigation exposes Home, Research, Publications, and Join us directly on desktop and phones, without a collapsed menu or navigation script. Responsive spacing and type keep the links on one row at normal phone text sizes; wrapping accommodates enlarged text. Static content never depends on client API calls or JavaScript for visibility. Images reserve dimensions; the current portrait and early-work thumbnails are generated as responsive WebP. Original public image URLs remain available.
 
 The profile replaces the email's `@` with readable `[at]` text, keeps the domain intact, and displays a short office location. Person metadata omits email, and the privacy page links back to the contact block rather than publishing a full address. This reduces straightforward HTML harvesting while preserving contact information without JavaScript. Earlier projects are linked from the footer, and programme-specific supervision information is linked from the prospective-students section to the university profile.
 
@@ -69,6 +69,6 @@ The shared Markdown renderer retains build-time code highlighting, math/MathML, 
 
 `npm run validate` runs formatting, Astro/TypeScript diagnostics, the production build, and two lightweight content checks: unique paper IDs/DOIs with valid research references, and internal links/assets/anchors. Page copy and content counts are free to change. Presentation changes are checked in the local desktop and phone preview. PR builds cannot deploy. Production deployment targets `master` and the `github-pages` environment.
 
-The current production Pages source is the legacy branch/Jekyll mode. Deployment requires selecting GitHub Actions as the Pages source and merging the reviewed branch. This task does not change Pages settings or DNS. Rollback is a revert plus restoration of the previous Pages source if returning to Jekyll.
+Production uses GitHub Actions as the Pages source. The workflow publishes the validated static build from `master` to the existing `www.guangwei.wang` domain with HTTPS enforced. Rollback between Astro releases is a revert and redeployment; returning to the previous Jekyll site also requires restoring the legacy branch publishing source.
 
 Browser and accessibility checks are manual review tasks when changing presentation; they are not required for every content publication.
